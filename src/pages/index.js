@@ -1,3 +1,4 @@
+import { Sectionheader } from './../components/sectionheader';
 import Image from 'next/image';
 import { Inter } from 'next/font/google';
 import BGAnim from '@/components/BG-Anim';
@@ -31,9 +32,7 @@ export default function Home() {
       <section name="about" className="min-h-screen flex-col px-16 md:px-48 content-center justify-center items-center">
         <div className='flex flex-wrap mt-20'>
           <div className="w-full md:w-1/2">
-            <div className="flex flex-wrap">
-              <h2 className="text-3xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-t from-purple-500 to-red-700 divider">01. About Me</h2>
-            </div>
+            <Sectionheader title={'About Me'}/>
             <div>
               <div name="about-text" className="text-lg mt-8 pr-3">
                 <p>
@@ -67,7 +66,12 @@ export default function Home() {
             <img className="w-3/4 h-auto m-auto rounded-md bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 p-1" src="images/myself.png"></img>
           </div>
         </div>
+      </section>
 
+      <section name="features" className="min-h-screen flex-col px-16 md:px-48 content-center justify-center items-center">
+        <div className="flex flex-wrap">
+          <Sectionheader title={'Featured Projects'}/>
+        </div>
       </section>
     </>
   );
