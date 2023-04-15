@@ -16,7 +16,7 @@ export default function Home() {
       <main id='main' className="flex min-h-screen flex-col items-center p-24 content-center justify-center">
         <Navbar></Navbar>
         <div className="z-10" >
-          <h1 className="text-6xl text-gray-600 dark:text-gray-300">Hi I'm</h1>
+          <h1 className="text-6xl text-gray-600 dark:text-gray-300">Hi I&apos;m</h1>
           <div className="text-transparent bg-clip-text bg-gradient-to-t from-purple-500 to-red-700">
             <h1 className="text-8xl font-bold">Julian Lechner</h1>
             <h1 className="text-8xl font-bold">Web Developer</h1>
@@ -39,7 +39,7 @@ export default function Home() {
             web applications.
           </p>
           <br/>
-          <p>Here are a few of the technologies I've been using recently</p>
+          <p>Here are a few of the technologies I&apos;ve been using recently</p>
           <ul name="skill-list" className="skill-list">
             <li>React</li>
             <li>Node.js</li>
