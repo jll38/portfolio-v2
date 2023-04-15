@@ -3,16 +3,12 @@ import { Inter } from 'next/font/google';
 import BGAnim from '@/components/BG-Anim';
 import Navbar from '@/components/Navbar';
 import SocialBox from '@/components/socialbox';
+import animations from '../styles/animations.module.css';
 import Link from 'next/link';
 import Head from 'next/head';
 
 const inter = Inter({ subsets: ['latin'] });
 
-function handlePortfolioClick() {
-  if (typeof window !== 'undefined') {
-    window.location.href = '/portfolio';
-  }
-}
 
 export default function Home() {
   return (
@@ -21,19 +17,19 @@ export default function Home() {
         <Navbar></Navbar>
         <SocialBox/>
         <div className="z-10">
-          <h1 className="text-4xl md:text-6xl text-gray-600 dark:text-gray-300">Hi Im</h1>
+          <h1 className="text-4xl md:text-6xl text-gray-600 dark:text-gray-300">Hi, I&apos;m</h1>
           <div className="text-transparent bg-clip-text bg-gradient-to-t from-purple-500 to-red-700">
             <h1 className="text-5xl md:text-8xl font-bold">Julian Lechner</h1>
             <h1 className="text-5xl md:text-8xl font-bold">Web Developer</h1>
           </div>
           <p className="mb-4 text-lg font-normal text-gray-600 dark:text-gray-300">
             Responsive, <span className="text-transparent bg-clip-text bg-gradient-to-t from-purple-500 to-red-700">Reliable</span>, and Robust Web Development.</p>
-          <button className="bg-pink-700 hover:bg-pink-800 text-white font-bold py-2 px-4 rounded" onClick={handlePortfolioClick}>
-            View Portfolio
-          </button>
         </div>
+        <i name='down-arrow' class={`${animations.bob} fa-solid fa-angle-down text-purple-400`}></i>
       </main>
-      <section name="about" className="bg-black min-h-screen flex px-6 md:px-72">
+
+      <section name="about" className="min-h-screen flex-col px-6 md:px-72 content-center justify-center items-center">
+        <div className='flex mt-20'>
         <div className="w-3/4">
           <div className="flex flex-wrap">
             <h2 className="text-3xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-t from-purple-500 to-red-700 divider">01. About Me</h2>
@@ -59,6 +55,7 @@ export default function Home() {
         </div>
         <div className="w-1/4">
             <img className="object-fill" src="images/myself.png"></img>
+          </div>
           </div>
       </section>
     </>
