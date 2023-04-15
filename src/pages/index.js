@@ -30,7 +30,7 @@ export default function Home() {
           </button>
         </div>
       </main>
-      <section name="about" className="bg-black min-h-screen flex flex-col items-center px-6 md:px-72">
+      <section name="about" className="bg-black min-h-screen flex flex-col px-6 md:px-72">
         <div className="flex flex-wrap">
           <h2 className="text-3xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-t from-purple-500 to-red-700 divider">01. About Me</h2>
         </div>
@@ -41,7 +41,7 @@ export default function Home() {
           </p>
           <br />
           <p>Here are a few of the technologies I&apos;ve been using recently</p>
-          <ul name="skill-list" className="skill-list grid grid-cols-2 md:grid-cols-none gap-2">
+          <ul name="skill-list" className="skill-list">
             <li>React</li>
             <li>Node.js</li>
             <li>Flask</li>
