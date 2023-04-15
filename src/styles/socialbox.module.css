@@ -1,0 +1,30 @@
+.container {
+    padding: 0;
+    left: 0;
+    bottom: 0;
+    max-width: 50px;
+    min-height: 200px;
+    position: fixed;
+    z-index: 99;
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 0;
+  }
+
+  .divider {
+    position: relative;
+  }
+  
+  .divider:after {
+    content: "";
+    display: block;
+    bottom: -20px;
+    position: relative;
+    width: 2px;
+    height: 100px;
+    background-color: rgb(237, 62, 164);
+  }
+  
