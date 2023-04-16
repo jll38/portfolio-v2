@@ -23,7 +23,7 @@ export default function Home() {
             <h1 className="text-5xl md:text-8xl font-bold">Julian Lechner</h1>
             <h1 className="text-5xl md:text-8xl font-bold">Web Developer</h1>
           </div>
-          <p className="mb-4 text-lg font-normal text-gray-600 dark:text-gray-300">
+          <p className="mb-4 text-xl font-normal text-gray-600 dark:text-gray-300">
             Responsive, <span className="text-transparent bg-clip-text bg-gradient-to-t from-purple-500 to-red-700">Reliable</span>, and Robust Web Development.</p>
         </div>
         <i name='down-arrow' class={`${animations.bob} fa-solid fa-angle-down text-purple-400`}></i>
@@ -69,9 +69,10 @@ export default function Home() {
       </section>
 
       <section name="features" className="min-h-screen flex-col px-16 md:px-48 content-center justify-center items-center">
-        <div className="flex flex-wrap">
           <Sectionheader title={'Featured Projects'}/>
-        </div>
+          <div name='project-showcase' className='w-full m-5 grid grid-cols-2 gap-10'>
+              
+          </div>
       </section>
     </>
   );
