@@ -1,11 +1,13 @@
 import { Sectionheader } from './../components/sectionheader';
-import {useRef} from 'react';
+import { useRef, useState, useEffect } from 'react';
 import Image from 'next/image';
 import { Inter } from 'next/font/google';
 import BGAnim from '@/components/BG-Anim';
 import Navbar from '@/components/Navbar';
 import SocialBox from '@/components/socialbox';
 import animations from '../styles/animations.module.css';
+import SpotifyViewer from '@/components/SongDisplay';
+
 import Link from 'next/link';
 import Head from 'next/head';
 
@@ -18,14 +20,14 @@ export default function Home() {
 
   //Smooth scrolls down to about section
   const handleArrow1Click = () => {
-    aboutRef.current?.scrollIntoView({behavior: 'smooth'})
+    aboutRef.current?.scrollIntoView({ behavior: 'smooth' })
   };
 
   //Smooth scrols to project section
   const handleArrow2Click = () => {
-    featRef.current?.scrollIntoView({behavior: 'smooth'})
+    featRef.current?.scrollIntoView({ behavior: 'smooth' })
   };
-  
+
   return (
     <>
       <main id="main" className="flex min-h-screen flex-col items-center p-6 md:p-24 content-center justify-center">
@@ -40,13 +42,13 @@ export default function Home() {
           <p className="mb-4 text-xl font-normal text-gray-600 dark:text-gray-300">
             Responsive, <span className="text-transparent bg-clip-text bg-gradient-to-t from-purple-500 to-red-700">Reliable</span>, and Robust Web Development.</p>
         </div>
-        <button onClick={handleArrow1Click}><i  name='down-arrow' class={`${animations.bob} fa-solid fa-angle-down fa-xl text-purple-400`}></i></button>
+        <button onClick={handleArrow1Click}><i name='down-arrow' className={`${animations.bob} fa-solid fa-angle-down fa-xl text-purple-400`}></i></button>
       </main>
 
       <section ref={aboutRef} name="about" className="flex min-h-screen flex-col px-16 md:px-48 content-center justify-center items-center">
         <div className='flex flex-wrap mt-20'>
           <div className="w-full md:w-1/2">
-            <Sectionheader title={'About Me'}/>
+            <Sectionheader title={'About Me'} />
             <div>
               <div name="about-text" className="text-lg mt-8 pr-3">
                 <p>
@@ -73,6 +75,7 @@ export default function Home() {
                   <li>SQL</li>
                   <li>Playwright</li>
                 </ul>
+                <SpotifyViewer/>
               </div>
             </div>
           </div>
@@ -80,15 +83,15 @@ export default function Home() {
             <img className="w-3/4 h-auto m-auto rounded-md bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 p-1" src="images/myself.png"></img>
           </div>
         </div>
-        <button onClick={handleArrow2Click}><i  name='down-arrow' class={`${animations.bob} fa-solid fa-angle-down fa-xl text-purple-400 m-auto mt-10`}></i></button>
+        <button onClick={handleArrow2Click}><i name='down-arrow' className={`${animations.bob} fa-solid fa-angle-down fa-xl text-purple-400 m-auto mt-10`}></i></button>
 
       </section>
 
       <section ref={featRef} name="features" className="flex min-h-screen flex-col px-16 md:px-48 content-center justify-center items-center">
-          <Sectionheader title={'Featured Projects'}/>
-          <div name='project-showcase' className='w-full m-5 grid grid-cols-2 gap-10'>
-              
-          </div>
+        <Sectionheader title={'Featured Projects'} />
+        <div name='project-showcase' className='w-full m-5 grid grid-cols-2 gap-10'>
+
+        </div>
       </section>
     </>
   );
