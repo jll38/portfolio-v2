@@ -7,6 +7,7 @@ import Navbar from '@/components/Navbar';
 import SocialBox from '@/components/socialbox';
 import animations from '../styles/animations.module.css';
 import SpotifyViewer from '@/components/SongDisplay';
+import FeaturedBox from '@/components/FeaturedBox';
 
 import Link from 'next/link';
 import Head from 'next/head';
@@ -90,11 +91,15 @@ export default function Home() {
 
       </section>
 
-      <section ref={featRef} name="features" className="flex min-h-screen flex-col px-16 md:px-48 content-center justify-center items-center">
+      <section ref={featRef} name="features" className="flex min-h-screen flex-col px-16 md:px-48 content-center justify-center ">
         <Sectionheader title={'Featured Projects'} />
-        <div name='project-showcase' className='w-full m-5 grid grid-cols-2 gap-10'>
-
+        <div className='grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 p-2 gap-5'>
+          <FeaturedBox src='/images/projects/quizard.png' alt='Quizard Logo' text='Test'/>
+          <FeaturedBox src='/images/projects/quizard.png' alt='Quizard Logo' text='Test'/>
+          <FeaturedBox src='/images/projects/quizard.png' alt='Quizard Logo' text='Test'/>
+          
         </div>
+
       </section>
     </>
   );

@@ -6,6 +6,7 @@ import rehypeRaw from 'rehype-raw';
 import Navbar from '../../components/Navbar';
 import SocialBox from '../../components/socialbox';
 import Link from 'next/link';
+import Image from 'next/image';
 
 const tailwindRenderer = {
     h1: (props) => <h1 as="h1" className='text-3xl text-bold my-5'{...props} />,
@@ -18,7 +19,7 @@ const tailwindRenderer = {
     ol: (props) => <ol pl="1.5rem" {...props} />,
     ul: (props) => <ul pl="1.5rem" {...props} />,
     li: (props) => <li {...props} />,
-    img: (props) => <img className="w-full h-auto my-5" {...props} />,
+    img: (props) => <Image className="w-full h-auto my-5" width='1000' height='1000' {...props} />,
     // Add more custom renderers for other elements as needed
 };
 

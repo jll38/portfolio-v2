@@ -14,6 +14,7 @@ const oauth = new OAuth(
   'HMAC-SHA1'
 );
 
+// eslint-disable-next-line import/no-anonymous-default-export
 export default async (req, res) => {
   try {
     const requestToken = await new Promise((resolve, reject) => {
