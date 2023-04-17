@@ -1,7 +1,7 @@
 import { OAuth } from 'oauth';
 
-const apiKey = process.env.LAST_FM_KEY;
-const apiSecret = process.env.LAST_FM_SECRET;
+const apiKey = process.env.NEXT_PUBLIC_LAST_FM_KEY;
+const apiSecret = process.env.NEXT_PUBLIC_LAST_FM_SECRET;
 const callbackUrl = 'http://localhost:3000/api/lastfm/callback';
 
 const oauth = new OAuth(

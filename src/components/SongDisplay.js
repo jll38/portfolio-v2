@@ -5,11 +5,10 @@ const SpotifyViewer = () => {
     const [songTitle, setSongTitle] = useState('');
     const [current, setCurrent] = useState(true);
   
-    const API_KEY = process.env.LAST_FM_KEY;
+    const API_KEY = process.env.NEXT_PUBLIC_LAST_FM_KEY;
     const USERNAME = 'jlucher';
   
     useEffect(() => {
-    console.log('api key: ' + API_KEY);
       const getRecentTracks = async () => {
         try {
           const response = await fetch(
