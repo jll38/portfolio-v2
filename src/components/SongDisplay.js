@@ -49,7 +49,7 @@ const SpotifyViewer = () => {
                         const millisecondsDifference = currentTime.getTime() - lastPlayedDate.getTime();
                         let minutesDifference = Math.floor(millisecondsDifference / (1000 * 60));
                         const hoursDifference = Math.floor(minutesDifference / 60);
-                        if (minutesDifference < 0) 
+                        if (minutesDifference <= 0) 
                         { 
                             minutesDifference = 1;
                         }

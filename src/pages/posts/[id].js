@@ -3,6 +3,9 @@ import Head from 'next/head';
 import Date from '../../components/date';
 import ReactMarkdown from 'react-markdown';
 import rehypeRaw from 'rehype-raw';
+import Navbar from '../../components/navbar';
+import SocialBox from '../../components/socialbox';
+import Link from 'next/link';
 
 const tailwindRenderer = {
     h1: (props) => <h1 as="h1" className='text-3xl text-bold my-5'{...props} />,
@@ -15,6 +18,7 @@ const tailwindRenderer = {
     ol: (props) => <ol pl="1.5rem" {...props} />,
     ul: (props) => <ul pl="1.5rem" {...props} />,
     li: (props) => <li {...props} />,
+    img: (props) => <img className="w-full h-auto my-5" {...props} />,
     // Add more custom renderers for other elements as needed
 };
 
@@ -24,22 +28,31 @@ export default function Post({ postData }) {
             <Head>
                 <title>{postData.title}</title>
             </Head>
-            <article>
-                <h1 className="text-3xl text-bold my-5">
-                    {postData.title}
-                </h1>
-                <div>
-                    <Date dateString={postData.date} />
-                </div>
-                <div maxW="1000px">
-                    <ReactMarkdown
-                        components={tailwindRenderer}
-                        rehypePlugins={[rehypeRaw]}
-                    >
-                        {postData.contentHtml}
-                    </ReactMarkdown>
-                </div>
-            </article>
+            <Navbar/>
+            <SocialBox/>
+            <div className='container mx-auto p-10 md:p-0'>
+                <article className='my-10'>
+                    <div name='return-nav'>
+                        <Link href='/blog'>&#8592; Go Back</Link>
+                    </div>
+                    <div name='Article Header' className='font-bold text-transparent bg-clip-text bg-gradient-to-t from-purple-500 to-red-700'>
+                        <h1 className="text-4xl ">
+                            {postData.title}
+                        </h1>
+                        <div>
+                            <Date dateString={postData.date} />
+                        </div>
+                    </div>
+                    <div className='my-5 w-1/2'>
+                        <ReactMarkdown
+                            components={tailwindRenderer}
+                            rehypePlugins={[rehypeRaw]}
+                        >
+                            {postData.content}
+                        </ReactMarkdown>
+                    </div>
+                </article>
+            </div>
         </>
     );
 }
