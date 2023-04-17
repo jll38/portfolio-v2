@@ -30,6 +30,7 @@ export default function Home() {
 
   return (
     <>
+
       <main id="main" className="flex min-h-screen flex-col items-center p-6 md:p-24 content-center justify-center">
         <Navbar></Navbar>
         <SocialBox />
@@ -75,7 +76,7 @@ export default function Home() {
                   <li>SQL</li>
                   <li>Playwright</li>
                 </ul>
-                <SpotifyViewer/>
+                <SpotifyViewer />
               </div>
             </div>
           </div>
