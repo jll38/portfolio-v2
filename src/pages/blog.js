@@ -2,7 +2,7 @@ import Head from 'next/head'
 import { getSortedPostsData } from '../lib/posts'
 import Link from 'next/link'
 import Date from '../components/date'
-import Navbar from '../components/navbar'
+import Navbar from '../components/Navbar'
 import SocialBox from '../components/socialbox'
 export default function Blog({ allPostsData }) {
     return (

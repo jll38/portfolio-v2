@@ -3,7 +3,7 @@ import Head from 'next/head';
 import Date from '../../components/date';
 import ReactMarkdown from 'react-markdown';
 import rehypeRaw from 'rehype-raw';
-import Navbar from '../../components/navbar';
+import Navbar from '../../components/Navbar';
 import SocialBox from '../../components/socialbox';
 import Link from 'next/link';
 
