@@ -12,7 +12,7 @@ const ScaleOnHover = ({ children }) => {
     <animated.div
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
-      style={animation}
+      style={{ ...animation, display: 'inline-block' }}
     >
       {children}
     </animated.div>
