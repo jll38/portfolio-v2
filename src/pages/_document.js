@@ -4,6 +4,8 @@ export default function Document() {
   return (
     <Html lang="en">
       <Head>
+        <meta name="description" content="Julian Lechner: Experienced Web Developer making quality websites" />
+        <meta name="keywords" content="Web Developer, For Hire, Front End, Full Stack, Resume, Portfolio" />
         {/* Global Site Tag (gtag.js) - Google Analytics */}
         <script
           async

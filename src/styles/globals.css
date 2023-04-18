@@ -176,3 +176,21 @@ html {
     opacity: 0;
   }
 }
+
+.pink-overlay::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgb(205, 16, 114);
+  opacity: 0.5;
+  pointer-events: none;
+  transition: opacity 0.4s ease-in-out;
+}
+
+.pink-overlay:hover::after {
+  opacity: 0;
+}
+

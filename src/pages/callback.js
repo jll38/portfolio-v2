@@ -12,7 +12,7 @@ const CallbackPage = () => {
     // or using the browser's local storage API:
     // localStorage.setItem('access_token', accessToken);
     router.push('/');
-  }, []);
+  }, [router]);
   return null;
 };
 

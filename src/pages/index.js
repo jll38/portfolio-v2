@@ -7,6 +7,7 @@ import Navbar from '@/components/Navbar';
 import SocialBox from '@/components/socialbox';
 import animations from '../styles/animations.module.css';
 import SpotifyViewer from '@/components/SongDisplay';
+import FeaturedBox from '@/components/FeaturedBox';
 
 import Link from 'next/link';
 import Head from 'next/head';
@@ -30,7 +31,9 @@ export default function Home() {
 
   return (
     <>
-
+      <Head>
+        <title>Home</title>
+      </Head>
       <main id="main" className="flex min-h-screen flex-col items-center p-6 md:p-24 content-center justify-center">
         <Navbar></Navbar>
         <SocialBox />
@@ -43,7 +46,7 @@ export default function Home() {
           <p className="mb-4 text-xl font-normal text-gray-600 dark:text-gray-300">
             Responsive, <span className="text-transparent bg-clip-text bg-gradient-to-t from-purple-500 to-red-700">Reliable</span>, and Robust Web Development.</p>
         </div>
-        <button onClick={handleArrow1Click}><i name='down-arrow' className={`${animations.bob} fa-solid fa-angle-down fa-xl text-purple-400`}></i></button>
+        <button onClick={handleArrow1Click}><i aria-label='Down Arrow Button to About Section' className={`${animations.bob} fa-solid fa-angle-down fa-xl text-purple-400`}></i></button>
       </main>
 
       <section ref={aboutRef} name="about" className="flex min-h-screen flex-col px-16 md:px-48 content-center justify-center items-center">
@@ -81,16 +84,20 @@ export default function Home() {
             </div>
           </div>
           <div className="w-full md:w-1/2 flex items-end">
-            <img className="w-3/4 h-auto m-auto rounded-md bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 p-1" src="images/myself.png"></img>
+            <Image className="w-3/4 h-auto m-auto rounded-md bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 p-1" src="/images/myself.png" alt="Picture of myself" width='500' height='500'></Image>
           </div>
         </div>
-        <button onClick={handleArrow2Click}><i name='down-arrow' className={`${animations.bob} fa-solid fa-angle-down fa-xl text-purple-400 m-auto mt-10`}></i></button>
+        <button onClick={handleArrow2Click}><i aria-label='Down Arrow Button' className={`${animations.bob} fa-solid fa-angle-down fa-xl text-purple-400 m-auto mt-10`}></i></button>
 
       </section>
 
-      <section ref={featRef} name="features" className="flex min-h-screen flex-col px-16 md:px-48 content-center justify-center items-center">
+      <section ref={featRef} name="features" className="flex min-h-screen flex-col px-16 md:px-36 content-center justify-center ">
         <Sectionheader title={'Featured Projects'} />
-        <div name='project-showcase' className='w-full m-5 grid grid-cols-2 gap-10'>
+        <div className='grid md:grid-cols-2 xl:grid-cols-4 md:gap-y-10 p-2 mt-5'>
+          <FeaturedBox src='/images/projects/quizard.png' alt='Quizard Logo' text='Quizard' href='https://github.com/jll38/quizard'/>
+          <FeaturedBox src='/images/projects/reask-bank.png' alt='Reask Bank Logo' text='Reask Bank' href='https://github.com/jll38/flask-react-bank' />
+          <FeaturedBox src='/images/projects/yt-dl.png' alt='Quizard Logo' text='Youtube DL' href='https://github.com/jll38/react-flask-youtube-dl'/>
+
 
         </div>
       </section>
