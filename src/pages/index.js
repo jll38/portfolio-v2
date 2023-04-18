@@ -96,10 +96,10 @@ export default function Home() {
         <div className='grid md:grid-cols-2 xl:grid-cols-4 md:gap-y-10 p-2 mt-5'>
           <FeaturedBox src='/images/projects/quizard.png' alt='Quizard Logo' text='Quizard' href='https://github.com/jll38/quizard'/>
           <FeaturedBox src='/images/projects/reask-bank.png' alt='Reask Bank Logo' text='Reask Bank' href='https://github.com/jll38/flask-react-bank' />
-          <FeaturedBox src='/images/projects/yt-dl.png' alt='Quizard Logo' text='Youtube DL' href=''/>
+          <FeaturedBox src='/images/projects/yt-dl.png' alt='Quizard Logo' text='Youtube DL' href='https://github.com/jll38/react-flask-youtube-dl'/>
+
+
         </div>
-
-
       </section>
     </>
   );
