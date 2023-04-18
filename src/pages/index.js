@@ -93,13 +93,12 @@ export default function Home() {
 
       <section ref={featRef} name="features" className="flex min-h-screen flex-col px-16 md:px-36 content-center justify-center ">
         <Sectionheader title={'Featured Projects'} />
-        <div className='grid md:grid-cols-2 xl:grid-cols-4 md:gap-y-10 p-2 mt-5'>
-          <FeaturedBox src='/images/projects/quizard.png' alt='Quizard Logo' text='Quizard' href='https://github.com/jll38/quizard'/>
+        <div className='grid md:grid-cols-2 xl:grid-cols-4 md:gap-y-10 lg:gap-x-0 p-2 mt-5'>
+          <FeaturedBox src='/images/projects/quizard.png' alt='Quizard Logo' text='Quizard' href='https://github.com/jll38/quizard' />
           <FeaturedBox src='/images/projects/reask-bank.png' alt='Reask Bank Logo' text='Reask Bank' href='https://github.com/jll38/flask-react-bank' />
-          <FeaturedBox src='/images/projects/yt-dl.png' alt='Quizard Logo' text='Youtube DL' href='https://github.com/jll38/react-flask-youtube-dl'/>
-
-
+          <FeaturedBox src='/images/projects/yt-dl.png' alt='Quizard Logo' text='Youtube DL' href='https://github.com/jll38/react-flask-youtube-dl' />
         </div>
+        <button><i aria-label='Down Arrow Button' className={`${animations.bob} fa-solid fa-angle-down fa-xl text-purple-400 m-auto mt-10`}></i></button>
       </section>
     </>
   );
