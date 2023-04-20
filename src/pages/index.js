@@ -48,7 +48,7 @@ export default function Home() {
             Hi, I&apos;m
           </h1>
           <div className="text-transparent bg-clip-text bg-gradient-to-t from-purple-500 to-red-700">
-            <h1 className="text-5xl md:text-8xl font-bold">Julian Lechner</h1>
+            <h1 className="text-5xl md:text-8xl font-bold" id="hero-name">Julian Lechner</h1>
             <h1 className="text-5xl md:text-8xl font-bold">Web Developer</h1>
           </div>
           <p className="mb-4 text-xl font-normal text-gray-600 dark:text-gray-300">
