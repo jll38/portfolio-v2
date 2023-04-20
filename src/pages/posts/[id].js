@@ -9,9 +9,9 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 const tailwindRenderer = {
-    h1: (props) => <h1 as="h1" className='text-3xl text-bold my-5'{...props} />,
-    h2: (props) => <h2 as="h2" className='text-2xl my-5'{...props} />,
-    h3: (props) => <h3 as="h3" size="lg" my="5"{...props} />,
+    h1: (props) => <h1 as="h1" className='text-3xl text-bold my-5 text-transparent bg-clip-text bg-gradient-to-t from-purple-500 to-red-700 font-bold'{...props} />,
+    h2: (props) => <h2 as="h2" className='text-2xl my-5 text-transparent bg-clip-text bg-gradient-to-t from-pink-500 to-yellow-400 font-bold'{...props} />,
+    h3: (props) => <h3 as="h3" className ='text-xl my-5 text-transparent bg-clip-text bg-gradient-to-t from-purple-500 to-red-400 font-bold' {...props} />,
     h4: (props) => <h4 as="h4" size="md" my="5"{...props} />,
     h5: (props) => <h5 as="h5" size="sm" my="5"{...props} />,
     h6: (props) => <h6 as="h6" size="xs" my="5"{...props} />,
@@ -20,6 +20,7 @@ const tailwindRenderer = {
     ul: (props) => <ul pl="1.5rem" {...props} />,
     li: (props) => <li {...props} />,
     img: (props) => <Image className="w-full h-auto my-5" width='1000' height='1000' {...props} />,
+    strong: (props) => <span className='text-transparent bg-clip-text bg-gradient-to-t from-purple-500 to-red-700 font-bold' {...props}/>,
     // Add more custom renderers for other elements as needed
 };
 
