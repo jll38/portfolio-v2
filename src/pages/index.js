@@ -131,9 +131,10 @@ export default function Home() {
       <section
         ref={featRef}
         name="features"
-        className="flex min-h-screen flex-col px-16 md:px-52 content-center justify-center "
+        className="flex min-h-screen flex-col px-16 md:px-48 content-center justify-center "
       >
-        <Sectionheader title={"Featured Projects"} />
+        <Sectionheader title={"Projects"} />
+        <div className="xl:w-1/2">
         {projects.map((project, i) => {
           return(
             <Project key={'project-' + i} 
@@ -143,6 +144,7 @@ export default function Home() {
             desc={project.desc}/>
           );
         })}
+        </div>
         <button>
           <i
             aria-label="Down Arrow Button"
