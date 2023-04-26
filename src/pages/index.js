@@ -28,6 +28,7 @@ export default function Home() {
     featRef.current?.scrollIntoView({ behavior: "smooth" });
   };
   const projects = [
+    { name: "Home Sync Hub", desc: "An affiliate marketing blog website that focuses on Smart Home technologies. Developed in NextJS and utilizes the Sanity content management system.", link: "https://homesynchub.com", year: 2023},
     { name: "Quizard", desc: "Interactive quiz platform built with React, ChakraUI, and Python Flask, this platform offers an engaging and seamless user experience.", link: "https://github.com/jll38/quizard", year: 2023},
     { name: "Youtube-DL", desc: "Web Application that allows users to download youtube videos while providing a valid url.", "link": "https://github.com/jll38/react-flask-youtube-dl", year: 2023},
     { name: "Reask Bank", desc: "A full stack banking application that stores and displays funds, transactions, and generated card information.", link: "https://github.com/jll38/flask-react-bank", year: 2022},
