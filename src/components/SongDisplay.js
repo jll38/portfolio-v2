@@ -7,6 +7,7 @@ const SpotifyViewer = () => {
     const [songImg, setSongImg] = useState('');
     const [current, setCurrent] = useState(true);
     const [playingStatusChanged, setPlayingStatusChanged] = useState(false);
+    const [hours, setHours] = useState(false);
 
     const API_KEY = process.env.NEXT_PUBLIC_LAST_FM_KEY;
     const USERNAME = 'jlucher';
@@ -55,7 +56,9 @@ const SpotifyViewer = () => {
                         }
                         if (minutesDifference < 60) {
                             setTimeAgo(`${minutesDifference} minutes`);
+                            setHours(false);
                         } else {
+                            setHours(true);
                             setTimeAgo(`${hoursDifference} hours`);
                         }
                     }
@@ -82,8 +85,11 @@ const SpotifyViewer = () => {
         if (!current) {
             const updateTimeAgo = () => {
                 const timeParts = timeAgo.split(' ');
-                let newValue = parseInt(timeParts[0]) + 1;
-                setTimeAgo(`${newValue} ${timeParts[1]}`);
+                if(!hours){
+                    let newValue = parseInt(timeParts[0]) + 1;
+                    setTimeAgo(`${newValue} ${timeParts[1]}`);
+                }
+
             };
 
             const timeAgoInterval = setInterval(updateTimeAgo, 60000);
