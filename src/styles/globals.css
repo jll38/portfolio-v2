@@ -205,3 +205,18 @@ html {
   opacity: 0;
 }
 
+.hide {
+  opacity: 0;
+  filter: blur(3px);
+  transition: all 1s
+}
+@media(prefers-reduced-motion){
+  .hide {
+    transition: none;
+  }
+}
+.show {
+  transform: translateX(0) !important;
+  filter:blur(0);
+  opacity: 1;
+}

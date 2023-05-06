@@ -71,7 +71,7 @@ export default function Home() {
       <section
         ref={aboutRef}
         name="about"
-        className="flex min-h-screen flex-col px-16 md:px-48 content-center justify-center items-center"
+        className="flex min-h-screen flex-col px-16 md:px-48 content-center justify-center items-center hide"
       >
         <div className="flex flex-wrap mt-20">
           <div className="w-full md:w-1/2">
@@ -132,7 +132,7 @@ export default function Home() {
       <section
         ref={featRef}
         name="features"
-        className="flex min-h-screen flex-col px-16 md:px-48 content-center justify-center "
+        className="flex min-h-screen flex-col px-16 md:px-48 content-center justify-center hide"
       >
         <Sectionheader title={"Projects"} />
         <div className="xl:w-1/2">

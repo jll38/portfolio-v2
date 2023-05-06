@@ -11,6 +11,7 @@ export default function Document() {
           async
           src={`https://www.googletagmanager.com/gtag/js?id=G-88S17Y02RM`}
         />
+        <script defer src="js/scroll-animated.js"></script>
         <script
           dangerouslySetInnerHTML={{
             __html: `
