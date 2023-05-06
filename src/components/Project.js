@@ -4,7 +4,7 @@ import ScaleOnHover from "./ScaleOnHover";
 
 const Project = (props) => {
   return (
-    <div className="my-2">
+    <div className="my-2 hide">
       <div className="flex gap-4">
         <ScaleOnHover>
           <a href={props.link} target="_blank">
