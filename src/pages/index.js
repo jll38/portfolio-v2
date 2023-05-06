@@ -135,7 +135,7 @@ export default function Home() {
         className="flex min-h-screen flex-col px-16 md:px-48 content-center justify-center hide"
       >
         <Sectionheader title={"Projects"} />
-        <div className="xl:w-1/2">
+        <div className="xl:w-1/2 projects">
         {projects.map((project, i) => {
           return(
             <Project key={'project-' + i} 

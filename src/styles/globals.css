@@ -220,3 +220,15 @@ html {
   filter:blur(0);
   opacity: 1;
 }
+
+.projects:nth-child(2){
+  transition-delay: 200ms;
+}
+
+.projects:nth-child(3){
+  transition-delay: 400ms;
+}
+
+.projects:nth-child(4){
+  transition-delay: 600ms;
+}
