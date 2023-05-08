@@ -199,12 +199,20 @@ export default function Home() {
       <section
         ref={funnyButtonRef}
         name="funny button section"
-        className="flex min-h-screen flex-col px-16 md:px-48 content-center justify-center hide"
+        className="flex min-h-screen flex-col px-16 md:px-48 content-center justify-center"
       >
         <Sectionheader title={"?"} />
-        <button onClick={funnyButtonHandler} id="funnyBtn" className={funnyBtnClass}>
-          Hi
-        </button>
+        <div name="btn container" className="min-h-[50%]">
+          <div className="mx-auto justify-center flex">
+            <button
+              onClick={funnyButtonHandler}
+              id="funnyBtn"
+              className={funnyBtnClass}
+            >
+              Hi
+            </button>
+          </div>
+        </div>
         <button onClick={handleArrow3Click}>
           <i
             aria-label="Down Arrow Button"
