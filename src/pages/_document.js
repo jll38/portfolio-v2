@@ -5,7 +5,14 @@ export default function Document() {
     <Html lang="en">
       <Head>
         <meta name="description" content="Julian Lechner: Experienced Web Developer making quality websites" />
-        <meta name="keywords" content="Web Developer, For Hire, Front End, Full Stack, Resume, Portfolio" />
+        
+        <meta name="keywords" content="web developer, front-end, back-end, full-stack, JavaScript, HTML, CSS, Python, PHP, Ruby, Node.js, React, Angular, Vue.js, responsive design, UI/UX, website optimization, SEO, web design, web application, mobile app development, web developer resume, web developer portfolio, coding, programming, software engineer, software development, computer science, coding bootcamp, web developer skills, web developer experience, web developer certifications, web developer job market, web developer interview, web developer career, web developer industry, web developer trends, web developer resources, web developer networking" />
+        <link rel="icon" href="/favicon.ico" />
+        <meta property="og:description" content="Experienced Web Developer making quality websites" />
+        <meta property="og:image" content="https://jlechner.com/images/myself.png" />
+        <meta property="og:title" content="Julian Lechner - Web Developer" />
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:image" content="https://jlechner.com/images/myself.png" />
         {/* Global Site Tag (gtag.js) - Google Analytics */}
         <script
           async
