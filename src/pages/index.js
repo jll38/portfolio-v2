@@ -17,6 +17,9 @@ const inter = Inter({ subsets: ["latin"] });
 export default function Home() {
   const aboutRef = useRef(null);
   const featRef = useRef(null);
+  const funnyButtonRef = useRef(null);
+
+  const [funnyBtnClass, setFunnyBtnClass] = useState("funnyOne");
 
   //Smooth scrolls down to about section
   const handleArrow1Click = () => {
@@ -27,11 +30,46 @@ export default function Home() {
   const handleArrow2Click = () => {
     featRef.current?.scrollIntoView({ behavior: "smooth" });
   };
+
+  //Smooth scrols to the funny button
+  const handleArrow3Click = () => {
+    funnyButtonRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
+  const funnyButtonHandler = () => {
+    const classes = [
+      "funnyOne",
+      "funnyTwo",
+      "funnyThree",
+      "funnyFour",
+      "funnyFive",
+    ];
+    setFunnyBtnClass(classes[Math.floor(Math.random() * classes.length)]); // Randomly selects class name from array
+  };
   const projects = [
-    { name: "Home Sync Hub", desc: "An affiliate marketing blog website that focuses on Smart Home technologies. Developed in NextJS and utilizes the Sanity content management system.", link: "https://homesynchub.com", year: 2023},
-    { name: "Quizard", desc: "Interactive quiz platform built with React, ChakraUI, and Python Flask, this platform offers an engaging and seamless user experience.", link: "https://github.com/jll38/quizard", year: 2023},
-    { name: "Youtube-DL", desc: "Web Application that allows users to download youtube videos while providing a valid url.", "link": "https://github.com/jll38/react-flask-youtube-dl", year: 2023},
-    { name: "Reask Bank", desc: "A full stack banking application that stores and displays funds, transactions, and generated card information.", link: "https://github.com/jll38/flask-react-bank", year: 2022},
+    {
+      name: "Home Sync Hub",
+      desc: "An affiliate marketing blog website that focuses on Smart Home technologies. Developed in NextJS and utilizes the Sanity content management system.",
+      link: "https://homesynchub.com",
+      year: 2023,
+    },
+    {
+      name: "Quizard",
+      desc: "Interactive quiz platform built with React, ChakraUI, and Python Flask, this platform offers an engaging and seamless user experience.",
+      link: "https://github.com/jll38/quizard",
+      year: 2023,
+    },
+    {
+      name: "Youtube-DL",
+      desc: "Web Application that allows users to download youtube videos while providing a valid url.",
+      link: "https://github.com/jll38/react-flask-youtube-dl",
+      year: 2023,
+    },
+    {
+      name: "Reask Bank",
+      desc: "A full stack banking application that stores and displays funds, transactions, and generated card information.",
+      link: "https://github.com/jll38/flask-react-bank",
+      year: 2022,
+    },
   ];
   return (
     <>
@@ -49,7 +87,9 @@ export default function Home() {
             Hi, I&apos;m
           </h1>
           <div className="text-transparent bg-clip-text bg-gradient-to-t from-purple-500 to-red-700">
-            <h1 className="text-5xl md:text-8xl font-bold" id="hero-name">Julian Lechner</h1>
+            <h1 className="text-5xl md:text-8xl font-bold" id="hero-name">
+              Julian Lechner
+            </h1>
             <h1 className="text-5xl md:text-8xl font-bold">Web Developer</h1>
           </div>
           <p className="mb-4 text-xl font-normal text-gray-600 dark:text-gray-300">
@@ -136,17 +176,36 @@ export default function Home() {
       >
         <Sectionheader title={"Projects"} />
         <div className="xl:w-1/2 projects">
-        {projects.map((project, i) => {
-          return(
-            <Project key={'project-' + i} 
-            name={project.name}
-            year={project.year}
-            link={project.link}
-            desc={project.desc}/>
-          );
-        })}
+          {projects.map((project, i) => {
+            return (
+              <Project
+                key={"project-" + i}
+                name={project.name}
+                year={project.year}
+                link={project.link}
+                desc={project.desc}
+              />
+            );
+          })}
         </div>
         <button>
+          <i
+            aria-label="Down Arrow Button"
+            className={`${animations.bob} fa-solid fa-angle-down fa-xl text-purple-400 m-auto mt-10`}
+          ></i>
+        </button>
+      </section>
+
+      <section
+        ref={funnyButtonRef}
+        name="funny button section"
+        className="flex min-h-screen flex-col px-16 md:px-48 content-center justify-center hide"
+      >
+        <Sectionheader title={"?"} />
+        <button onClick={funnyButtonHandler} id="funnyBtn" className={funnyBtnClass}>
+          Hi
+        </button>
+        <button onClick={handleArrow3Click}>
           <i
             aria-label="Down Arrow Button"
             className={`${animations.bob} fa-solid fa-angle-down fa-xl text-purple-400 m-auto mt-10`}
