@@ -19,7 +19,7 @@ export default function Blog({ allPostsData }) {
                     <ul>
                         {allPostsData.map(({ id, date, title }) => (
                             <li key={id}>
-                                <Link href={`/posts/${id}`} className='text-xl text-transparent bg-clip-text bg-gradient-to-t from-purple-500 to-yellow-500 font-bold'>{title}</Link>
+                                <Link href={`/blog/${id}`} className='text-xl text-transparent bg-clip-text bg-gradient-to-t from-purple-500 to-yellow-500 font-bold'>{title}</Link>
                                 <br />
                                 <small>
                                     <Date dateString={date} />
