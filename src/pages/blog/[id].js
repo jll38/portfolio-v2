@@ -77,7 +77,7 @@ export default function Post({ postData }) {
                 <Date dateString={postData.date} />
               </div>
             </div>
-            <div className="my-5 px-5">
+            <div className="my-5 px-5 text-sm sm:text-md md:text-lg">
               <ReactMarkdown
                 components={tailwindRenderer}
                 rehypePlugins={[rehypeRaw]}
