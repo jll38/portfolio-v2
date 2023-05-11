@@ -1,3 +1,4 @@
+import { SkillCard } from "./../components/SkillCard";
 import { Sectionheader } from "./../components/sectionheader";
 import { useRef, useState, useEffect } from "react";
 import Image from "next/image";
@@ -17,21 +18,71 @@ const inter = Inter({ subsets: ["latin"] });
 export default function Home() {
   const aboutRef = useRef(null);
   const featRef = useRef(null);
-
+  const skillsRef = useRef(null);
   //Smooth scrolls down to about section
   const handleArrow1Click = () => {
     aboutRef.current?.scrollIntoView({ behavior: "smooth" });
   };
 
-  //Smooth scrols to project section
+  //Smooth scrols to skills section
   const handleArrow2Click = () => {
+    skillsRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
+
+  //Smooth scrols to projects section
+  const handleArrow3Click = () => {
     featRef.current?.scrollIntoView({ behavior: "smooth" });
   };
+
+  const frontEndSkills = [
+    "HTML",
+    "CSS",
+    "JavaScript",
+    "React",
+    "Next.JS",
+    "TailwindCSS",
+    "Bootstrap",
+  ];
+  const backEndSkills = ["Node.JS", "SQL", "Python", "Restful APIs", "CMS", "", ""];
+  const otherSkills = [
+    "Git",
+    "GitHub",
+    "Heroku",
+    "Webpack",
+    "Docker",
+    "VSCode",
+    ""
+  ];
+
+  const frontEndLogo = "fa-brands fa-html5";
+  const backEndLogo = "fa-solid fa-code";
+  const otherLogo = "fa-solid fa-screwdriver-wrench";
+
   const projects = [
-    { name: "Home Sync Hub", desc: "An affiliate marketing blog website that focuses on Smart Home technologies. Developed in NextJS and utilizes the Sanity content management system.", link: "https://homesynchub.com", year: 2023},
-    { name: "Quizard", desc: "Interactive quiz platform built with React, ChakraUI, and Python Flask, this platform offers an engaging and seamless user experience.", link: "https://github.com/jll38/quizard", year: 2023},
-    { name: "Youtube-DL", desc: "Web Application that allows users to download youtube videos while providing a valid url.", "link": "https://github.com/jll38/react-flask-youtube-dl", year: 2023},
-    { name: "Reask Bank", desc: "A full stack banking application that stores and displays funds, transactions, and generated card information.", link: "https://github.com/jll38/flask-react-bank", year: 2022},
+    {
+      name: "Home Sync Hub",
+      desc: "An affiliate marketing blog website that focuses on Smart Home technologies. Developed in NextJS and utilizes the Sanity content management system.",
+      link: "https://homesynchub.com",
+      year: 2023,
+    },
+    {
+      name: "Quizard",
+      desc: "Interactive quiz platform built with React, ChakraUI, and Python Flask, this platform offers an engaging and seamless user experience.",
+      link: "https://github.com/jll38/quizard",
+      year: 2023,
+    },
+    {
+      name: "Youtube-DL",
+      desc: "Web Application that allows users to download youtube videos while providing a valid url.",
+      link: "https://github.com/jll38/react-flask-youtube-dl",
+      year: 2023,
+    },
+    {
+      name: "Reask Bank",
+      desc: "A full stack banking application that stores and displays funds, transactions, and generated card information.",
+      link: "https://github.com/jll38/flask-react-bank",
+      year: 2022,
+    },
   ];
   return (
     <>
@@ -49,7 +100,9 @@ export default function Home() {
             Hi, I&apos;m
           </h1>
           <div className="text-transparent bg-clip-text bg-gradient-to-t from-purple-500 to-red-700">
-            <h1 className="text-5xl md:text-8xl font-bold" id="hero-name">Julian Lechner</h1>
+            <h1 className="text-5xl md:text-8xl font-bold" id="hero-name">
+              Julian Lechner
+            </h1>
             <h1 className="text-5xl md:text-8xl font-bold">Web Developer</h1>
           </div>
           <p className="mb-4 text-xl font-normal text-gray-600 dark:text-gray-300">
@@ -94,19 +147,6 @@ export default function Home() {
                   abilities, demonstrated through my involvement in my
                   fraternity, Phi Sigma Kappa.
                 </p>
-                <br />
-                <p>
-                  Here are a few of the technologies I&apos;ve been using
-                  recently
-                </p>
-                <ul name="skill-list" className="skill-list">
-                  <li>React</li>
-                  <li>Node.js</li>
-                  <li>Flask</li>
-                  <li>Docker</li>
-                  <li>SQL</li>
-                  <li>Playwright</li>
-                </ul>
                 <SpotifyViewer />
               </div>
             </div>
@@ -130,28 +170,51 @@ export default function Home() {
       </section>
 
       <section
+        ref={skillsRef}
+        name="my skills"
+        className="flex min-h-screen flex-col px-16 md:px-48 content-center justify-center hide"
+      >
+        <Sectionheader title={"My Skills"} />
+        <div className="flex sm:flex-row flex-wrap sm:justify-between flex-col p-5 hide gap-10">
+          <SkillCard
+            logo={frontEndLogo}
+            title={"Front End"}
+            skills={frontEndSkills}
+          />
+          <SkillCard
+            logo={backEndLogo}
+            title={"Back End"}
+            skills={backEndSkills}
+          />
+          <SkillCard logo={otherLogo} title={"Other"} skills={otherSkills} />
+        </div>
+        <button onClick={handleArrow3Click}>
+          <i
+            aria-label="Down Arrow Button"
+            className={`${animations.bob} fa-solid fa-angle-down fa-xl text-purple-400 m-auto mt-10`}
+          ></i>
+        </button>
+      </section>
+
+      <section
         ref={featRef}
         name="features"
         className="flex min-h-screen flex-col px-16 md:px-48 content-center justify-center hide"
       >
         <Sectionheader title={"Projects"} />
         <div className="xl:w-1/2 projects">
-        {projects.map((project, i) => {
-          return(
-            <Project key={'project-' + i} 
-            name={project.name}
-            year={project.year}
-            link={project.link}
-            desc={project.desc}/>
-          );
-        })}
+          {projects.map((project, i) => {
+            return (
+              <Project
+                key={"project-" + i}
+                name={project.name}
+                year={project.year}
+                link={project.link}
+                desc={project.desc}
+              />
+            );
+          })}
         </div>
-        <button>
-          <i
-            aria-label="Down Arrow Button"
-            className={`${animations.bob} fa-solid fa-angle-down fa-xl text-purple-400 m-auto mt-10`}
-          ></i>
-        </button>
       </section>
     </>
   );
