@@ -1,0 +1,36 @@
+import React from "react";
+export function SkillCard({ ...props }) {
+  return (
+    <div
+      name="cardContainer"
+      className="sm:w-[25%] flex-col w-[100%] rounded-md overflow-hidden"
+    >
+      <div
+        name="cardHeader"
+        className="text-center align-middle p-2 bg-gradient-to-b from-red-700 to-purple-700 pt-5 pb-5"
+        style={{textShadow: "1px 1px 2px rgba(0,0,0, 0.7)"}}
+      >
+        <i
+          className={props.logo + " fa-2xl text-white mb-4"}
+          alt="HTML5 Logo"
+        ></i>
+        <p className="font-bold">{props.title}</p>
+      </div>
+      <div name="cardbody"
+      className="text-center align-middle p-2 bg-gradient-to-b from-purple-700 pb-20"
+      style={{textShadow: "1px 1px 2px rgba(0,0,0, 0.4)"}}>
+        <ul>
+          {props.skills.map((skill, i) => {
+            if (skill) {
+              console.log(skill);
+              return <li key={i}>{skill}</li>;
+            } else{
+              console.log("Empty Skill String");
+              return <li key={i}><br/></li>
+            }
+          })}
+        </ul>
+      </div>
+    </div>
+  );
+}
