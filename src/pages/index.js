@@ -91,12 +91,12 @@ export default function Home() {
       </Head>
       <main
         id="main"
-        className="flex min-h-screen flex-col items-center p-6 md:p-24 content-center justify-center"
+        className="flex min-h-screen flex-col items-center p-6 md:p-24 content-center justify-center bg-black text-white"
       >
         <Navbar></Navbar>
         <SocialBox />
         <div className="z-10">
-          <h1 className="text-4xl md:text-6xl text-gray-600 dark:text-gray-300">
+          <h1 className="text-4xl md:text-6xl text-white">
             Hi, I&apos;m
           </h1>
           <div className="text-transparent bg-clip-text bg-gradient-to-t from-purple-500 to-red-700">
@@ -105,7 +105,7 @@ export default function Home() {
             </h1>
             <h1 className="text-5xl md:text-8xl font-bold">Web Developer</h1>
           </div>
-          <p className="mb-4 text-xl font-normal text-gray-600 dark:text-gray-300">
+          <p className="mb-4 text-xl font-normal">
             Responsive,{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-t from-purple-500 to-red-700">
               Reliable
@@ -124,9 +124,9 @@ export default function Home() {
       <section
         ref={aboutRef}
         name="about"
-        className="flex min-h-screen flex-col px-16 md:px-48 content-center justify-center items-center hide"
+        className="flex min-h-screen flex-col px-16 md:px-48 content-center justify-center items-center  bg-black text-white bg-opacity-100"
       >
-        <div className="flex flex-wrap mt-20">
+        <div className="flex flex-wrap mt-20 hide">
           <div className="w-full md:w-1/2">
             <Sectionheader title={"About Me"} />
             <div>
@@ -172,10 +172,10 @@ export default function Home() {
       <section
         ref={skillsRef}
         name="my skills"
-        className="flex min-h-screen flex-col px-16 md:px-48 content-center justify-center hide"
+        className="flex min-h-screen flex-col px-16 md:px-48 content-center justify-center bg-black"
       >
         <Sectionheader title={"My Skills"} />
-        <div className="flex sm:flex-row flex-wrap sm:justify-between flex-col p-5 hide gap-10">
+        <div className="flex sm:flex-row flex-wrap sm:justify-between flex-col p-5 hide gap-10 hide text-white">
           <SkillCard
             logo={frontEndLogo}
             title={"Front End"}
@@ -199,8 +199,9 @@ export default function Home() {
       <section
         ref={featRef}
         name="features"
-        className="flex min-h-screen flex-col px-16 md:px-48 content-center justify-center hide"
+        className="flex min-h-screen flex-col px-16 md:px-48 content-center justify-center bg-black"
       >
+        <div className="hide">
         <Sectionheader title={"Projects"} />
         <div className="xl:w-1/2 projects">
           {projects.map((project, i) => {
@@ -214,6 +215,7 @@ export default function Home() {
               />
             );
           })}
+          </div>
         </div>
       </section>
     </>
