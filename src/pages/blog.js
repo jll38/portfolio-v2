@@ -13,7 +13,7 @@ export default function Blog({ allPostsData }) {
             <div className="fixed h-screen w-screen bg-gradient-to-t from-gray-400 to-white -z-10 dark:hidden">
 
 </div>
-            <div className="flex min-h-screen flex-col px-16 md:px-48 content-center justify-center items-center">
+            <div className="flex min-h-screen flex-col px-16 md:px-48 content-center justify-center items-center dark:bg-black">
                 <Navbar />
                 <SocialBox />
                 <section className='flex flex-col'>

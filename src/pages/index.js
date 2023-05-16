@@ -96,7 +96,7 @@ export default function Home() {
       </div>
       <main
         id="main"
-        className="flex min-h-screen flex-col items-center p-6 md:p-24 content-center justify-center text-white"
+        className="flex min-h-screen flex-col items-center p-6 md:p-24 content-center justify-center text-white dark:bg-black"
       >
         <Navbar></Navbar>
         <SocialBox />
