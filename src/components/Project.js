@@ -8,14 +8,14 @@ const Project = (props) => {
       <div className="flex gap-4">
         <ScaleOnHover>
           <a href={props.link} target="_blank">
-            <h4 className="text-2xl xl:text-4xl text-transparent bg-clip-text bg-gradient-to-t from-purple-900 via-red-500 to-yellow-500 font-semibold">
+            <h4 className="text-2xl xl:text-4xl dark:text-transparent bg-clip-text bg-gradient-to-t text-blue-400 dark:from-purple-900 dark:via-red-500 dark:to-yellow-500 font-semibold dark:shadow-none drop-shadow-sm">
               {props.name}
             </h4>
           </a>
         </ScaleOnHover>
-        <p className="self-end">{props.year}</p>
+        <p className="self-end text-gray-700 dark:text-gray-200">{props.year}</p>
       </div>
-      <p className="text-gray-200">{props.desc}</p>
+      <p className="text-gray-700 dark:text-gray-200">{props.desc}</p>
     </div>
   );
 };

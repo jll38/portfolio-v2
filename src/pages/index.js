@@ -19,6 +19,8 @@ export default function Home() {
   const aboutRef = useRef(null);
   const featRef = useRef(null);
   const skillsRef = useRef(null);
+  
+
   //Smooth scrolls down to about section
   const handleArrow1Click = () => {
     aboutRef.current?.scrollIntoView({ behavior: "smooth" });
@@ -89,25 +91,28 @@ export default function Home() {
       <Head>
         <title>Home</title>
       </Head>
+      <div className="fixed h-screen w-screen bg-gradient-to-t from-gray-400 to-white -z-10 dark:hidden">
+
+      </div>
       <main
         id="main"
-        className="flex min-h-screen flex-col items-center p-6 md:p-24 content-center justify-center bg-black text-white"
+        className="flex min-h-screen flex-col items-center p-6 md:p-24 content-center justify-center text-white"
       >
         <Navbar></Navbar>
         <SocialBox />
         <div className="z-10">
-          <h1 className="text-4xl md:text-6xl text-white">
+          <h1 className="text-4xl md:text-6xl text-gray-800 dark:text-white ">
             Hi, I&apos;m
           </h1>
-          <div className="text-transparent bg-clip-text bg-gradient-to-t from-purple-500 to-red-700">
+          <div className="text-transparent bg-clip-text bg-gradient-radial from-blue-600 to-blue-400 dark:bg-gradient-to-t dark:from-purple-500 dark:to-red-700 ">
             <h1 className="text-5xl md:text-8xl font-bold" id="hero-name">
               Julian Lechner
             </h1>
             <h1 className="text-5xl md:text-8xl font-bold">Web Developer</h1>
           </div>
-          <p className="mb-4 text-xl font-normal">
+          <p className="mb-4 text-xl font-normal text-gray-800 dark:text-white">
             Responsive,{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-t from-purple-500 to-red-700">
+            <span className="dark:text-transparent dark:bg-clip-text text-blue-600 dark:bg-gradient-to-t dark:from-purple-500 dark:to-red-700">
               Reliable
             </span>
             , and Robust Web Development.
@@ -116,7 +121,7 @@ export default function Home() {
         <button onClick={handleArrow1Click}>
           <i
             aria-label="Down Arrow Button to About Section"
-            className={`${animations.bob} fa-solid fa-angle-down fa-xl text-purple-400`}
+            className={`${animations.bob} fa-solid fa-angle-down fa-xl text-blue-500 dark:text-purple-400`}
           ></i>
         </button>
       </main>
@@ -124,7 +129,7 @@ export default function Home() {
       <section
         ref={aboutRef}
         name="about"
-        className="flex min-h-screen flex-col px-16 md:px-48 content-center justify-center items-center  bg-black text-white bg-opacity-100"
+        className="flex min-h-screen flex-col px-16 md:px-48 content-center justify-center items-center text-gray-700 dark:bg-black dark:text-white bg-opacity-100"
       >
         <div className="flex flex-wrap mt-20 hide">
           <div className="w-full md:w-1/2">
@@ -133,7 +138,7 @@ export default function Home() {
               <div name="about-text" className="text-lg mt-8 pr-3">
                 <p>
                   Hello! My name is{" "}
-                  <span className="text-transparent bg-clip-text bg-gradient-to-t from-purple-500 to-red-700 font-bold">
+                  <span className="dark:text-transparent bg-clip-text bg-gradient-radial text-blue-500 dark:bg-gradient-to-t dark:from-purple-500 dark:to-red-700 font-bold">
                     Julian Lechner
                   </span>
                   , and I am an enthusiastic web developer pursuing a Bachelor
@@ -153,7 +158,7 @@ export default function Home() {
           </div>
           <div className="w-full md:w-1/2 flex items-end">
             <Image
-              className="w-3/4 h-auto m-auto rounded-md bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 p-1"
+              className="w-3/4 h-auto m-auto rounded-md bg-gradient-to-r dark:from-pink-500 dark:via-red-500 dark:to-yellow-400 from-blue-600 via-orange-400 to-blue-400 p-1"
               src="/images/myself.png"
               alt="Picture of myself"
               width="500"
@@ -164,7 +169,7 @@ export default function Home() {
         <button onClick={handleArrow2Click}>
           <i
             aria-label="Down Arrow Button"
-            className={`${animations.bob} fa-solid fa-angle-down fa-xl text-purple-400 m-auto mt-10`}
+            className={`${animations.bob} fa-solid fa-angle-down fa-xl text-blue-500 dark:text-purple-400 m-auto mt-10`}
           ></i>
         </button>
       </section>
@@ -172,10 +177,10 @@ export default function Home() {
       <section
         ref={skillsRef}
         name="my skills"
-        className="flex min-h-screen flex-col px-16 md:px-48 content-center justify-center bg-black"
+        className="flex min-h-screen flex-col px-16 md:px-48 content-center justify-center dark:bg-black"
       >
         <Sectionheader title={"My Skills"} />
-        <div className="flex sm:flex-row flex-wrap sm:justify-between flex-col p-5 hide gap-10 hide text-white">
+        <div className="flex sm:flex-row flex-wrap sm:justify-between flex-col p-5 hide gap-10 hide dark:text-white">
           <SkillCard
             logo={frontEndLogo}
             title={"Front End"}
@@ -191,7 +196,7 @@ export default function Home() {
         <button onClick={handleArrow3Click}>
           <i
             aria-label="Down Arrow Button"
-            className={`${animations.bob} fa-solid fa-angle-down fa-xl text-purple-400 m-auto mt-10`}
+            className={`${animations.bob} fa-solid fa-angle-down fa-xl text-blue-500 dark:text-purple-400 m-auto mt-10`}
           ></i>
         </button>
       </section>
@@ -199,7 +204,7 @@ export default function Home() {
       <section
         ref={featRef}
         name="features"
-        className="flex min-h-screen flex-col px-16 md:px-48 content-center justify-center bg-black"
+        className="flex min-h-screen flex-col px-16 md:px-48 content-center justify-center dark:text-white dark:bg-black"
       >
         <div className="hide">
         <Sectionheader title={"Projects"} />
