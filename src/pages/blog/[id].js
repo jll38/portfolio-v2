@@ -26,7 +26,7 @@ const tailwindRenderer = {
   h3: (props) => (
     <h3
       as="h3"
-      className="text-xl my-5 text-transparent bg-clip-text bg-gradient-to-t from-purple-500 to-red-400 font-bold"
+      className="text-xl my-5 text-transparent bg-clip-text bg-gradient-to-t from-cyan-500 to-blue-600 dark:from-purple-500 dark:to-red-400 font-bold"
       {...props}
     />
   ),
@@ -47,7 +47,7 @@ const tailwindRenderer = {
   ),
   strong: (props) => (
     <span
-      className="text-transparent bg-clip-text bg-gradient-to-t from-purple-500 to-red-700 font-bold"
+      className="text-transparent bg-clip-text bg-gradient-to-t from-cyan-500 to-blue-600 dark:from-purple-500 dark:to-red-700 font-bold"
       {...props}
     />
   ),
@@ -57,36 +57,40 @@ const tailwindRenderer = {
 export default function Post({ postData }) {
   return (
     <>
-      <Head>
-        <title>{postData.title}</title>
-      </Head>
-      <Navbar />
-      <SocialBox />
-      <div className="container mx-auto p-10 md:p-0">
-        <article className="my-10 md:mx-5">
-          <div className="xl:mx-auto xl:w-1/2">
-            <div name="return-nav">
-              <Link href="/blog">&#8592; Go Back</Link>
-            </div>
-            <div
-              name="Article Header"
-              className="font-bold text-transparent bg-clip-text bg-gradient-to-t from-purple-500 to-red-700 xl:text-center"
-            >
-              <h1 className="text-4xl ">{postData.title}</h1>
-              <div>
-                <Date dateString={postData.date} />
+      <div className="dark:bg-black absolute top-0 w-screen">
+        <div className="fixed h-screen w-screen bg-gradient-to-t from-gray-400 to-white -z-10 dark:hidden top-0 "></div>
+        <Head>
+          <title>{postData.title}</title>
+        </Head>
+        <Navbar />
+        <SocialBox />
+
+        <div className="container mx-auto p-10 md:p-0">
+          <article className="my-10 md:mx-5">
+            <div className="xl:mx-auto xl:w-1/2">
+              <div name="return-nav">
+                <Link href="/blog">&#8592; Go Back</Link>
+              </div>
+              <div
+                name="Article Header"
+                className="font-bold text-transparent bg-clip-text bg-gradient-to-t from-blue-600 to-blue-400 dark:from-purple-500 dark:to-red-700 xl:text-center"
+              >
+                <h1 className="text-4xl ">{postData.title}</h1>
+                <div>
+                  <Date dateString={postData.date} />
+                </div>
+              </div>
+              <div className="my-5 px-5 text-sm sm:text-md md:text-lg text-gray-800 dark:text-gray-100">
+                <ReactMarkdown
+                  components={tailwindRenderer}
+                  rehypePlugins={[rehypeRaw]}
+                >
+                  {postData.content}
+                </ReactMarkdown>
               </div>
             </div>
-            <div className="my-5 px-5 text-sm sm:text-md md:text-lg">
-              <ReactMarkdown
-                components={tailwindRenderer}
-                rehypePlugins={[rehypeRaw]}
-              >
-                {postData.content}
-              </ReactMarkdown>
-            </div>
-          </div>
-        </article>
+          </article>
+        </div>
       </div>
     </>
   );

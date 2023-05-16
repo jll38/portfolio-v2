@@ -31,7 +31,7 @@ export default function Document() {
             `,
           }} />
       </Head>
-      <body className="bg-black">
+      <body className="bg-white dark:bg-black">
         <Main/>
         <NextScript />
       </body>

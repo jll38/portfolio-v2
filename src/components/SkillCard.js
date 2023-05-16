@@ -7,7 +7,7 @@ export function SkillCard({ ...props }) {
     >
       <div
         name="cardHeader"
-        className="text-center align-middle p-2 bg-gradient-to-b from-red-700 to-purple-700 pt-5 pb-5"
+        className="text-center align-middle p-2 bg-gradient-to-b from-orange-400 to-blue-500 dark:from-red-700 dark:to-purple-700 pt-5 pb-5 text-white"
         style={{textShadow: "1px 1px 2px rgba(0,0,0, 0.7)"}}
       >
         <i
@@ -17,7 +17,7 @@ export function SkillCard({ ...props }) {
         <p className="font-bold">{props.title}</p>
       </div>
       <div name="cardbody"
-      className="text-center align-middle p-2 bg-gradient-to-b from-purple-700 pb-20"
+      className="text-center align-middle p-2 bg-gradient-to-b from-blue-500 dark:from-purple-700 pb-20 text-white"
       style={{textShadow: "1px 1px 2px rgba(0,0,0, 0.4)"}}>
         <ul>
           {props.skills.map((skill, i) => {

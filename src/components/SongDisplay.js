@@ -100,7 +100,7 @@ const SpotifyViewer = () => {
 
     return (
         <div className="mt-10">
-            <h3 className="text-3xl text-transparent bg-clip-text bg-gradient-to-t from-purple-500 to-red-700 font-bold"><i className="fa-brands fa-spotify fa-md text-purple-600"></i> {current ? "I'm Currently Listening To" : 'I Last Listened To'}  </h3>
+            <h3 className="text-3xl text-transparent bg-clip-text bg-gradient-radial from-blue-600 to-blue-400 dark:bg-gradient-to-t dark:from-purple-500 dark:to-red-700 font-bold"><i className="fa-brands fa-spotify fa-md text-blue-400 dark:text-purple-600"></i> {current ? "I'm Currently Listening To" : 'I Last Listened To'}  </h3>
             <p>
                 {current ? songTitle : `${songTitle} ${timeAgo} ago.`}
             </p>
