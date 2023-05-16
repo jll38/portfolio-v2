@@ -1,4 +1,5 @@
-import '@/styles/globals.css'
+import "@/styles/globals.css";
+import { ThemeProvider } from "next-themes";
 import { useRouter } from "next/router";
 import { useEffect } from "react";
 import { pageview } from "../lib/analytics";
@@ -18,8 +19,11 @@ function MyApp({ Component, pageProps }) {
     };
   }, [router.events]);
 
-  return <Component {...pageProps} />;
+  return (
+    <ThemeProvider attribute='class' className='ease-in-out duration-200'>
+      <Component {...pageProps} />
+    </ThemeProvider>
+  );
 }
 
 export default MyApp;
-

@@ -19,6 +19,8 @@ export default function Home() {
   const aboutRef = useRef(null);
   const featRef = useRef(null);
   const skillsRef = useRef(null);
+  
+
   //Smooth scrolls down to about section
   const handleArrow1Click = () => {
     aboutRef.current?.scrollIntoView({ behavior: "smooth" });
@@ -89,6 +91,9 @@ export default function Home() {
       <Head>
         <title>Home</title>
       </Head>
+      <div className="fixed h-screen w-screen bg-gradient-to-t from-gray-400 to-white -z-10 dark:hidden">
+
+      </div>
       <main
         id="main"
         className="flex min-h-screen flex-col items-center p-6 md:p-24 content-center justify-center text-white"
@@ -96,7 +101,7 @@ export default function Home() {
         <Navbar></Navbar>
         <SocialBox />
         <div className="z-10">
-          <h1 className="text-4xl md:text-6xl text-gray-600 dark:text-white ">
+          <h1 className="text-4xl md:text-6xl text-gray-800 dark:text-white ">
             Hi, I&apos;m
           </h1>
           <div className="text-transparent bg-clip-text bg-gradient-radial from-blue-600 to-blue-400 dark:bg-gradient-to-t dark:from-purple-500 dark:to-red-700 ">
@@ -105,9 +110,9 @@ export default function Home() {
             </h1>
             <h1 className="text-5xl md:text-8xl font-bold">Web Developer</h1>
           </div>
-          <p className="mb-4 text-xl font-normal text-gray-600 dark:text-white">
+          <p className="mb-4 text-xl font-normal text-gray-800 dark:text-white">
             Responsive,{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-radial from-yellow-600 to-yellow-400 dark:bg-gradient-to-t dark:from-purple-500 dark:to-red-700">
+            <span className="dark:text-transparent dark:bg-clip-text text-blue-600 dark:bg-gradient-to-t dark:from-purple-500 dark:to-red-700">
               Reliable
             </span>
             , and Robust Web Development.
@@ -133,7 +138,7 @@ export default function Home() {
               <div name="about-text" className="text-lg mt-8 pr-3">
                 <p>
                   Hello! My name is{" "}
-                  <span className="text-transparent bg-clip-text bg-gradient-radial from-blue-600 to-blue-400 dark:bg-gradient-to-t dark:from-purple-500 dark:to-red-700 font-bold">
+                  <span className="dark:text-transparent bg-clip-text bg-gradient-radial text-blue-500 dark:bg-gradient-to-t dark:from-purple-500 dark:to-red-700 font-bold">
                     Julian Lechner
                   </span>
                   , and I am an enthusiastic web developer pursuing a Bachelor
@@ -153,7 +158,7 @@ export default function Home() {
           </div>
           <div className="w-full md:w-1/2 flex items-end">
             <Image
-              className="w-3/4 h-auto m-auto rounded-md bg-gradient-to-r dark:from-pink-500 dark:via-red-500 dark:to-yellow-500 from-blue-600 via-yellow-500 to-blue-400 p-1"
+              className="w-3/4 h-auto m-auto rounded-md bg-gradient-to-r dark:from-pink-500 dark:via-red-500 dark:to-yellow-400 from-blue-600 via-orange-400 to-blue-400 p-1"
               src="/images/myself.png"
               alt="Picture of myself"
               width="500"
