@@ -31,8 +31,8 @@ export default function Document() {
             `,
           }} />
       </Head>
-      <body>
-        <Main />
+      <body className="bg-black">
+        <Main/>
         <NextScript />
       </body>
     </Html>
