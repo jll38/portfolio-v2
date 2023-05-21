@@ -5,8 +5,21 @@ import { useState, useEffect } from "react";
 import ScaleOnHover from "./ScaleOnHover";
 
 export default function Navbar() {
+  
+
   const [mounted, setMounted] = useState(false);
   const { theme, setTheme } = useTheme();
+  useEffect(() => {
+    // Check if window object is available
+    
+    if (typeof window !== "undefined") {
+      const prefersDarkMode = window.matchMedia("(prefers-color-scheme: dark)").matches;
+      const initialTheme = prefersDarkMode ? "dark" : "light";
+      setTheme(initialTheme);
+    }
+    setMounted(true);
+  }, [setTheme]);
+  
   useEffect(() => setMounted(true), []);
   if (!mounted) return null;
   return (
@@ -24,6 +37,7 @@ export default function Navbar() {
       <div className="flex gap-5">
         <ScaleOnHover>
           <button
+          aria-label="dark mode toggle"
             className="w-[30px] dark:text-pink-500 border-2 rounded-lg text-blue-400 border-blue-400 dark:border-pink-500"
             onClick={() => setTheme(theme === "light" ? "dark" : "light")}
           >
