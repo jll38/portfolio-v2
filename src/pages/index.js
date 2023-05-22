@@ -62,29 +62,41 @@ export default function Home() {
 
   const projects = [
     {
+      name: "Netflix Clone",
+      desc: "A recreation of the Netflix webpage created with Next.js and Tailwind.",
+      link: "https://netflix-clone-git-main-jll38.vercel.app/",
+      ghLink: "https://github.com/jll38/netflix-clone",
+      year: 2023,
+    },
+    {
       name: "Home Sync Hub",
       desc: "An affiliate marketing blog website that focuses on Smart Home technologies. Developed in NextJS and utilizes the Sanity content management system.",
-      link: "https://homesynchub.com",
+      link: "https://homesynchub.com/",
+      ghLink: "https://github.com/jll38/affiliate-marketing-site",
       year: 2023,
     },
     {
       name: "Quizard",
       desc: "Interactive quiz platform built with React, ChakraUI, and Python Flask, this platform offers an engaging and seamless user experience.",
       link: "https://github.com/jll38/quizard",
+      ghLink: "https://github.com/jll38/quizard",
       year: 2023,
     },
     {
       name: "Youtube-DL",
       desc: "Web Application that allows users to download youtube videos while providing a valid url.",
       link: "https://github.com/jll38/react-flask-youtube-dl",
+      ghLink: "https://github.com/jll38/react-flask-youtube-dl",
       year: 2023,
     },
     {
       name: "Reask Bank",
       desc: "A full stack banking application that stores and displays funds, transactions, and generated card information.",
       link: "https://github.com/jll38/flask-react-bank",
+      ghLink: "https://github.com/jll38/flask-react-bank",
       year: 2022,
     },
+
   ];
   return (
     <>
@@ -217,6 +229,7 @@ export default function Home() {
                 year={project.year}
                 link={project.link}
                 desc={project.desc}
+                ghLink={project.ghLink}
               />
             );
           })}

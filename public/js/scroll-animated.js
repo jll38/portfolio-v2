@@ -1,7 +1,7 @@
 const options = {
     root: null,
     rootMargin: '0px',
-    threshold: 0.3, //How much of the object needs to be visible for the class transition
+    threshold: 0.2, //How much of the object needs to be visible for the class transition
 };
 
 const observer = new IntersectionObserver((entries) => {

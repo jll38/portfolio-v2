@@ -16,6 +16,7 @@ const Project = (props) => {
         <p className="self-end text-gray-700 dark:text-gray-200">{props.year}</p>
       </div>
       <p className="text-gray-700 dark:text-gray-200">{props.desc}</p>
+      <div><a href={props.ghLink} target="_blank"><i className="fa-brands fa-github text-2xl"></i></a></div>
     </div>
   );
 };
