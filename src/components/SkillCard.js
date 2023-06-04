@@ -3,7 +3,7 @@ export function SkillCard({ ...props }) {
   return (
     <div
       name="cardContainer"
-      className="sm:w-[25%] flex-col w-[100%] rounded-md overflow-hidden"
+      className="flex-col w-[300px] rounded-md overflow-hidden"
     >
       <div
         name="cardHeader"

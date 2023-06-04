@@ -105,7 +105,7 @@ export default function Home() {
       <div className="fixed h-screen w-screen bg-gradient-to-t from-gray-400 to-white -z-10 dark:hidden"></div>
       <main
         id="main"
-        className="flex min-h-screen flex-col items-center p-6 md:p-24 content-center justify-center text-white dark:bg-black"
+        className="flex h-[90vh] flex-col items-center p-6 md:p-24 content-center justify-center text-white dark:bg-black"
       >
         <Navbar></Navbar>
         <SocialBox />
@@ -138,10 +138,10 @@ export default function Home() {
       <section
         ref={aboutRef}
         name="about"
-        className="flex min-h-screen flex-col px-16 md:px-48 content-center justify-center items-center text-gray-700 dark:bg-black dark:text-white bg-opacity-100"
+        className="flex h-[85vh] flex-col px-16 content-center justify-center items-center text-gray-700 dark:bg-black dark:text-white bg-opacity-100"
       >
-        <div className="flex flex-wrap mt-20 hide">
-          <div className="w-full md:w-1/2">
+        <div className="flex flex-wrap mt-20 hide justify-center">
+          <div className="w-full md:max-w-[550px]">
             <Sectionheader title={"About Me"} />
             <div>
               <div name="about-text" className="text-lg mt-8 pr-3">
@@ -165,13 +165,12 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="w-full md:w-1/2 flex items-end">
+          <div className="flex items-end relative w-[425px] h-[400px]">
             <Image
-              className="w-3/4 h-auto m-auto rounded-md bg-gradient-to-r dark:from-pink-500 dark:via-red-500 dark:to-yellow-400 from-blue-600 via-orange-400 to-blue-400 p-1"
+              className=" rounded-md bg-gradient-to-r dark:from-pink-500 dark:via-red-500 dark:to-yellow-400 from-blue-600 via-orange-400 to-blue-400 p-1 "
               src="/images/myself.png"
               alt="Picture of myself"
-              width="500"
-              height="500"
+              fill
             ></Image>
           </div>
         </div>
@@ -186,10 +185,10 @@ export default function Home() {
       <section
         ref={skillsRef}
         name="my skills"
-        className="flex min-h-screen flex-col px-16 md:px-48 content-center justify-center dark:bg-black"
+        className="flex h-[85vh] flex-col px-16 md:px-48 content-center justify-center dark:bg-black"
       >
         <Sectionheader title={"My Skills"} />
-        <div className="flex sm:flex-row flex-wrap sm:justify-between flex-col p-5 hide gap-10 hide dark:text-white">
+        <div className="flex flex-wrap justify-center gap-10 dark:text-white">
           <SkillCard
             logo={frontEndLogo}
             title={"Front End"}
@@ -213,7 +212,7 @@ export default function Home() {
       <section
         ref={featRef}
         name="features"
-        className="flex min-h-screen flex-col px-16 md:px-48 content-center justify-center dark:text-white dark:bg-black"
+        className="flex h-[85vh] flex-col px-16 md:px-48 content-center justify-center dark:text-white dark:bg-black"
       >
         <div className="hide">
           <Sectionheader title={"Projects"} />
