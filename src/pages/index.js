@@ -19,7 +19,6 @@ export default function Home() {
   const aboutRef = useRef(null);
   const featRef = useRef(null);
   const skillsRef = useRef(null);
-  
 
   //Smooth scrolls down to about section
   const handleArrow1Click = () => {
@@ -45,7 +44,15 @@ export default function Home() {
     "TailwindCSS",
     "Bootstrap",
   ];
-  const backEndSkills = ["Node.JS", "SQL", "Python", "Restful APIs", "CMS", "", ""];
+  const backEndSkills = [
+    "Node.JS",
+    "SQL",
+    "Python",
+    "Restful APIs",
+    "CMS",
+    "",
+    "",
+  ];
   const otherSkills = [
     "Git",
     "GitHub",
@@ -53,7 +60,7 @@ export default function Home() {
     "Webpack",
     "Docker",
     "VSCode",
-    ""
+    "",
   ];
 
   const frontEndLogo = "fa-brands fa-html5";
@@ -61,6 +68,13 @@ export default function Home() {
   const otherLogo = "fa-solid fa-screwdriver-wrench";
 
   const projects = [
+    {
+      name: "Atlas Gym",
+      desc: "This project aims to develop a modern and user-friendly front-end website for Atlas Gym. It includes features such as membership information, class schedules, trainer profiles, testimonials, contact details, and social media integration.",
+      link: "gym-site-psi.vercel.app",
+      ghLink: "https://github.com/jll38/gym-site",
+      year: 2023,
+    },
     {
       name: "Netflix Clone",
       desc: "A recreation of the Netflix webpage created with Next.js and Tailwind.",
@@ -82,30 +96,13 @@ export default function Home() {
       ghLink: "https://github.com/jll38/quizard",
       year: 2023,
     },
-    {
-      name: "Youtube-DL",
-      desc: "Web Application that allows users to download youtube videos while providing a valid url.",
-      link: "https://github.com/jll38/react-flask-youtube-dl",
-      ghLink: "https://github.com/jll38/react-flask-youtube-dl",
-      year: 2023,
-    },
-    {
-      name: "Reask Bank",
-      desc: "A full stack banking application that stores and displays funds, transactions, and generated card information.",
-      link: "https://github.com/jll38/flask-react-bank",
-      ghLink: "https://github.com/jll38/flask-react-bank",
-      year: 2022,
-    },
-
   ];
   return (
     <>
       <Head>
         <title>Home</title>
       </Head>
-      <div className="fixed h-screen w-screen bg-gradient-to-t from-gray-400 to-white -z-10 dark:hidden">
-
-      </div>
+      <div className="fixed h-screen w-screen bg-gradient-to-t from-gray-400 to-white -z-10 dark:hidden"></div>
       <main
         id="main"
         className="flex min-h-screen flex-col items-center p-6 md:p-24 content-center justify-center text-white dark:bg-black"
@@ -219,20 +216,20 @@ export default function Home() {
         className="flex min-h-screen flex-col px-16 md:px-48 content-center justify-center dark:text-white dark:bg-black"
       >
         <div className="hide">
-        <Sectionheader title={"Projects"} />
-        <div className="xl:w-1/2 projects">
-          {projects.map((project, i) => {
-            return (
-              <Project
-                key={"project-" + i}
-                name={project.name}
-                year={project.year}
-                link={project.link}
-                desc={project.desc}
-                ghLink={project.ghLink}
-              />
-            );
-          })}
+          <Sectionheader title={"Projects"} />
+          <div className="xl:w-1/2 projects">
+            {projects.map((project, i) => {
+              return (
+                <Project
+                  key={"project-" + i}
+                  name={project.name}
+                  year={project.year}
+                  link={project.link}
+                  desc={project.desc}
+                  ghLink={project.ghLink}
+                />
+              );
+            })}
           </div>
         </div>
       </section>
