@@ -71,7 +71,7 @@ export default function Home() {
     {
       name: "Atlas Gym",
       desc: "This project aims to develop a modern and user-friendly front-end website for Atlas Gym. It includes features such as membership information, class schedules, trainer profiles, testimonials, contact details, and social media integration.",
-      link: "gym-site-psi.vercel.app",
+      link: "https://gym-site-psi.vercel.app",
       ghLink: "https://github.com/jll38/gym-site",
       year: 2023,
     },
