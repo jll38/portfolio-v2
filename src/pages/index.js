@@ -19,7 +19,6 @@ export default function Home() {
   const aboutRef = useRef(null);
   const featRef = useRef(null);
   const skillsRef = useRef(null);
-  
 
   //Smooth scrolls down to about section
   const handleArrow1Click = () => {
@@ -45,7 +44,15 @@ export default function Home() {
     "TailwindCSS",
     "Bootstrap",
   ];
-  const backEndSkills = ["Node.JS", "SQL", "Python", "Restful APIs", "CMS", "", ""];
+  const backEndSkills = [
+    "Node.JS",
+    "SQL",
+    "Python",
+    "Restful APIs",
+    "CMS",
+    "",
+    "",
+  ];
   const otherSkills = [
     "Git",
     "GitHub",
@@ -53,7 +60,7 @@ export default function Home() {
     "Webpack",
     "Docker",
     "VSCode",
-    ""
+    "",
   ];
 
   const frontEndLogo = "fa-brands fa-html5";
@@ -61,6 +68,13 @@ export default function Home() {
   const otherLogo = "fa-solid fa-screwdriver-wrench";
 
   const projects = [
+    {
+      name: "Atlas Gym",
+      desc: "This project aims to develop a modern and user-friendly front-end website for Atlas Gym. It includes features such as membership information, class schedules, trainer profiles, testimonials, contact details, and social media integration.",
+      link: "https://gym-site-psi.vercel.app",
+      ghLink: "https://github.com/jll38/gym-site",
+      year: 2023,
+    },
     {
       name: "Netflix Clone",
       desc: "A recreation of the Netflix webpage created with Next.js and Tailwind.",
@@ -82,33 +96,16 @@ export default function Home() {
       ghLink: "https://github.com/jll38/quizard",
       year: 2023,
     },
-    {
-      name: "Youtube-DL",
-      desc: "Web Application that allows users to download youtube videos while providing a valid url.",
-      link: "https://github.com/jll38/react-flask-youtube-dl",
-      ghLink: "https://github.com/jll38/react-flask-youtube-dl",
-      year: 2023,
-    },
-    {
-      name: "Reask Bank",
-      desc: "A full stack banking application that stores and displays funds, transactions, and generated card information.",
-      link: "https://github.com/jll38/flask-react-bank",
-      ghLink: "https://github.com/jll38/flask-react-bank",
-      year: 2022,
-    },
-
   ];
   return (
     <>
       <Head>
         <title>Home</title>
       </Head>
-      <div className="fixed h-screen w-screen bg-gradient-to-t from-gray-400 to-white -z-10 dark:hidden">
-
-      </div>
+      <div className="fixed h-screen w-screen bg-gradient-to-t from-gray-400 to-white -z-10 dark:hidden"></div>
       <main
         id="main"
-        className="flex min-h-screen flex-col items-center p-6 md:p-24 content-center justify-center text-white dark:bg-black"
+        className="flex h-[90vh] flex-col items-center p-6 md:p-24 content-center justify-center text-white dark:bg-black"
       >
         <Navbar></Navbar>
         <SocialBox />
@@ -141,10 +138,10 @@ export default function Home() {
       <section
         ref={aboutRef}
         name="about"
-        className="flex min-h-screen flex-col px-16 md:px-48 content-center justify-center items-center text-gray-700 dark:bg-black dark:text-white bg-opacity-100"
+        className="flex h-[85vh] flex-col px-16 content-center justify-center items-center text-gray-700 dark:bg-black dark:text-white bg-opacity-100"
       >
-        <div className="flex flex-wrap mt-20 hide">
-          <div className="w-full md:w-1/2">
+        <div className="flex flex-wrap mt-20 hide justify-center">
+          <div className="w-full md:max-w-[550px]">
             <Sectionheader title={"About Me"} />
             <div>
               <div name="about-text" className="text-lg mt-8 pr-3">
@@ -168,13 +165,12 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="w-full md:w-1/2 flex items-end">
+          <div className="flex items-end relative w-[425px] h-[400px]">
             <Image
-              className="w-3/4 h-auto m-auto rounded-md bg-gradient-to-r dark:from-pink-500 dark:via-red-500 dark:to-yellow-400 from-blue-600 via-orange-400 to-blue-400 p-1"
+              className=" rounded-md bg-gradient-to-r dark:from-pink-500 dark:via-red-500 dark:to-yellow-400 from-blue-600 via-orange-400 to-blue-400 p-1 "
               src="/images/myself.png"
               alt="Picture of myself"
-              width="500"
-              height="500"
+              fill
             ></Image>
           </div>
         </div>
@@ -189,10 +185,10 @@ export default function Home() {
       <section
         ref={skillsRef}
         name="my skills"
-        className="flex min-h-screen flex-col px-16 md:px-48 content-center justify-center dark:bg-black"
+        className="flex h-[85vh] flex-col px-16 md:px-48 content-center justify-center dark:bg-black"
       >
         <Sectionheader title={"My Skills"} />
-        <div className="flex sm:flex-row flex-wrap sm:justify-between flex-col p-5 hide gap-10 hide dark:text-white">
+        <div className="flex flex-wrap justify-center gap-10 dark:text-white">
           <SkillCard
             logo={frontEndLogo}
             title={"Front End"}
@@ -216,23 +212,23 @@ export default function Home() {
       <section
         ref={featRef}
         name="features"
-        className="flex min-h-screen flex-col px-16 md:px-48 content-center justify-center dark:text-white dark:bg-black"
+        className="flex h-[85vh] flex-col px-16 md:px-48 content-center justify-center dark:text-white dark:bg-black"
       >
         <div className="hide">
-        <Sectionheader title={"Projects"} />
-        <div className="xl:w-1/2 projects">
-          {projects.map((project, i) => {
-            return (
-              <Project
-                key={"project-" + i}
-                name={project.name}
-                year={project.year}
-                link={project.link}
-                desc={project.desc}
-                ghLink={project.ghLink}
-              />
-            );
-          })}
+          <Sectionheader title={"Projects"} />
+          <div className="xl:w-1/2 projects">
+            {projects.map((project, i) => {
+              return (
+                <Project
+                  key={"project-" + i}
+                  name={project.name}
+                  year={project.year}
+                  link={project.link}
+                  desc={project.desc}
+                  ghLink={project.ghLink}
+                />
+              );
+            })}
           </div>
         </div>
       </section>
