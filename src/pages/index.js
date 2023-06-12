@@ -100,7 +100,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Home</title>
+        <title>Julian Lechner Web Developer</title>
       </Head>
       <div className="fixed h-screen w-screen bg-gradient-to-t from-gray-400 to-white -z-10 dark:hidden"></div>
       <main
