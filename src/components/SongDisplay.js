@@ -64,7 +64,7 @@ const SpotifyViewer = () => {
               minutesDifference = 1;
             }
             if (minutesDifference < 60) {
-              setTimeAgo(`${minutesDifference}min`);
+              setTimeAgo(`${minutesDifference} min`);
               setHours(false);
             } else {
               setHours(true);
@@ -106,7 +106,7 @@ const SpotifyViewer = () => {
   }, [current, timeAgo]);
 
   return (
-    <div className="fixed right-10 bottom-10 bg-white border-cerulean border-2 px-2 py-1 md:flex z-40 gap-3 hidden">
+    <div className="fixed right-10 bottom-10 bg-white border-cerulean border-2 p-1 md:flex z-40 gap-3 hidden">
       <div>
         <Image src={songImg} alt={songTitle + " By " + songArtist + " Cover Art"} width={75} height={75} />
       </div>

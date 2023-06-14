@@ -107,7 +107,7 @@ export default function Home() {
       </Head>
       <div className="fixed h-screen w-screen bg-gradient-to-t from-gray-400 to-white -z-10"></div>
       <IntroAnim />
-      <SpotifyViewer/>
+      <SpotifyViewer />
       <main id="main">
         <Navbar></Navbar>
         <section
@@ -169,7 +169,7 @@ export default function Home() {
         </section>
         <section
           id="tech-stack"
-          className="bg-prussian flex flex-wrap items-center justify-around gap-20 px-24 py-8"
+          className="bg-prussian flex flex-wrap items-center justify-around gap-20 px-24 py-10"
         >
           <Image
             src="/images/html.webp"
@@ -211,11 +211,48 @@ export default function Home() {
         </section>
 
         <section id="projects" className="h-[700px] bg-gray-300 flex flex-col">
-          <div className="border w-1/2 h-1/4 flex items-center justify-center">
+          <div className="w-1/2 h-1/4 flex items-center justify-center">
             <div className="text-gray-900 tracking-tighter font-semibold text-[4em]">
               Latest
-              <br />
               Projects
+            </div>
+          </div>
+          <div className="w-[425px]">
+            <div class="text-white font-medium break-words p-5">
+              <div>
+                <div class="truncate">
+                  <div class="text-center rounded  truncate">
+                    {" "}
+                    <Link
+                      href="https://gym-site-psi.vercel.app"
+                      class="cursor-pointer"
+                      target={"_blank"}
+                    >
+                      {" "}
+                      <img
+                        src="/images/atlas-gym.webp"
+                        class="align-middle rounded overflow-clip object-cover"
+                      />{" "}
+                    </Link>
+                  </div>
+                  <div class="bg-cerulean p-9 rounded">
+                    <h3 class="clear-both text-[1.35rem] font-bold mb-1   truncate">
+                      Atlas Gym (Business Site)
+                    </h3>
+                    <div>
+                      {" "}
+                      <span class="text-[0.94rem]">
+                        <a
+                          href="https://tamalsen.dev/portfolio-category/web-dev/"
+                          class="cursor-pointer"
+                        >
+                          Web Development
+                        </a>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </section>
