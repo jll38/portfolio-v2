@@ -107,6 +107,7 @@ export default function Home() {
       </Head>
       <div className="fixed h-screen w-screen bg-gradient-to-t from-gray-400 to-white -z-10"></div>
       <IntroAnim />
+      <SpotifyViewer/>
       <main id="main">
         <Navbar></Navbar>
         <section
