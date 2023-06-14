@@ -92,7 +92,7 @@ export default function Home() {
     {
       name: "Quizard",
       desc: "Interactive quiz platform built with React, ChakraUI, and Python Flask, this platform offers an engaging and seamless user experience.",
-      link: "https://github.com/jll38/quizard",
+      link: "quizard-rosy.vercel.app",
       ghLink: "https://github.com/jll38/quizard",
       year: 2023,
     },
