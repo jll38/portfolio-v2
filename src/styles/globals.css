@@ -1,7 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+/*
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -22,7 +22,7 @@ body {
       transparent,
       rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
 }
-
+*/
 body,
 html {
   margin: 0;
@@ -234,4 +234,9 @@ html {
 
 .projects:nth-child(4){
   transition-delay: 600ms;
+}
+
+#hero-ball{
+  transform: rotate(-15deg);
+  box-shadow: #1a1a1a7e 2px 6px 16px;
 }

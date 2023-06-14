@@ -76,6 +76,13 @@ export default function Home() {
       year: 2023,
     },
     {
+      name: "Quizard",
+      desc: "Interactive quiz platform built with React, ChakraUI, and Python Flask, this platform offers an engaging and seamless user experience.",
+      link: "https://quizard-rosy.vercel.app/",
+      ghLink: "https://github.com/jll38/quizard",
+      year: 2023,
+    },
+    {
       name: "Netflix Clone",
       desc: "A recreation of the Netflix webpage created with Next.js and Tailwind.",
       link: "https://netflix-clone-git-main-jll38.vercel.app/",
@@ -89,13 +96,7 @@ export default function Home() {
       ghLink: "https://github.com/jll38/affiliate-marketing-site",
       year: 2023,
     },
-    {
-      name: "Quizard",
-      desc: "Interactive quiz platform built with React, ChakraUI, and Python Flask, this platform offers an engaging and seamless user experience.",
-      link: "https://github.com/jll38/quizard",
-      ghLink: "https://github.com/jll38/quizard",
-      year: 2023,
-    },
+    {},
   ];
   return (
     <>
@@ -103,135 +104,46 @@ export default function Home() {
         <title>Julian Lechner Web Developer</title>
       </Head>
       <div className="fixed h-screen w-screen bg-gradient-to-t from-gray-400 to-white -z-10 dark:hidden"></div>
-      <main
-        id="main"
-        className="flex h-[90vh] flex-col items-center p-6 md:p-24 content-center justify-center text-white dark:bg-black"
-      >
+      <main id="main">
         <Navbar></Navbar>
-        <SocialBox />
-        <div className="z-10">
-          <h1 className="text-4xl md:text-6xl text-gray-800 dark:text-white ">
-            Hi, I&apos;m
-          </h1>
-          <div className="text-transparent bg-clip-text bg-gradient-radial from-blue-600 to-blue-400 dark:bg-gradient-to-t dark:from-purple-500 dark:to-red-700 ">
-            <h1 className="text-5xl md:text-8xl font-bold" id="hero-name">
-              Julian Lechner
-            </h1>
-            <h1 className="text-5xl md:text-8xl font-bold">Web Developer</h1>
-          </div>
-          <p className="mb-4 text-xl font-normal text-gray-800 dark:text-white">
-            Responsive,{" "}
-            <span className="dark:text-transparent dark:bg-clip-text text-blue-600 dark:bg-gradient-to-t dark:from-purple-500 dark:to-red-700">
-              Reliable
-            </span>
-            , and Robust Web Development.
-          </p>
-        </div>
-        <button onClick={handleArrow1Click}>
-          <i
-            aria-label="Down Arrow Button to About Section"
-            className={`${animations.bob} fa-solid fa-angle-down fa-xl text-blue-500 dark:text-purple-400`}
-          ></i>
-        </button>
-      </main>
-
-      <section
-        ref={aboutRef}
-        name="about"
-        className="flex h-[85vh] flex-col px-16 content-center justify-center items-center text-gray-700 dark:bg-black dark:text-white bg-opacity-100"
-      >
-        <div className="flex flex-wrap mt-20 hide justify-center">
-          <div className="w-full md:max-w-[550px]">
-            <Sectionheader title={"About Me"} />
-            <div>
-              <div name="about-text" className="text-lg mt-8 pr-3">
-                <p>
-                  Hello! My name is{" "}
-                  <span className="dark:text-transparent bg-clip-text bg-gradient-radial text-blue-500 dark:bg-gradient-to-t dark:from-purple-500 dark:to-red-700 font-bold">
-                    Julian Lechner
-                  </span>
-                  , and I am an enthusiastic web developer pursuing a Bachelor
-                  of Science in Information Technology at New Jersey Institute
-                  of Technology. As of now, I am currently seeking an internship
-                  position where I can apply my skills.
-                </p>
-                <br />
-                <p>
-                  Apart from my technical skills, I take pride in my leadership
-                  abilities, demonstrated through my involvement in my
-                  fraternity, Phi Sigma Kappa.
-                </p>
-                <SpotifyViewer />
+        <section id="hero" className="h-[800px] bg-white flex">
+          <div className="absolute w-full h-[800px]  mx-auto">
+            <div className="flex w-full h-full justify-center items-center">
+              <div id="hero-ball" className="w-[200px] h-[200px] relative bg-white rounded-full flex items-center justify-center px-4">
+                <div className="text-aero text-3xl text-center font-bold">LOOKING FOR WORK</div>
               </div>
             </div>
           </div>
-          <div className="flex items-end relative w-[425px] h-[400px]">
-            <Image
-              className=" rounded-md bg-gradient-to-r dark:from-pink-500 dark:via-red-500 dark:to-yellow-400 from-blue-600 via-orange-400 to-blue-400 p-1 "
-              src="/images/myself.png"
-              alt="Picture of myself"
-              fill
-            ></Image>
+          <div className="w-full md:w-1/2 h-full bg-aero flex flex-col justify-center items-center text-left md:px-0">
+            <div className="flex flex-col items-center sm:max-w-sm lg:max-w-lg sm:px-0 px-8">
+              <h1 className="uppercase font-bold tracking-[-.06em] w-full text-[350%] sm:text-[400%] lg:text-[500%] leading-[.8em]">
+                Julian Lechner <br /> Front End Developer
+              </h1>
+              <div
+                id="hero-about"
+                className="flex flex-col mt-12 font-semibold w-full"
+              >
+                <div className="text-prussian text-[1.2em] sm:text-[.8em] md:text-[1em] mb-2">
+                  &#47;&#47; ABOUT ME
+                </div>
+                <div className="md:text-[1.6em] sm:text-[2em] text-[2em]">
+                  Experienced developer in the New York City area
+                </div>
+                <div className="tracking-normal font-medium">
+                  I&apos;m a frontend developer with a commitment to building
+                  user-centric, responsive websites and applications that
+                  prioritize user experience without sacrificing speed or
+                  functionality.
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
-        <button onClick={handleArrow2Click}>
-          <i
-            aria-label="Down Arrow Button"
-            className={`${animations.bob} fa-solid fa-angle-down fa-xl text-blue-500 dark:text-purple-400 m-auto mt-10`}
-          ></i>
-        </button>
-      </section>
+          <div className="hidden md:block w-1/2 h-full bg-cerulean"></div>
+        </section>
+        <section></section>
 
-      <section
-        ref={skillsRef}
-        name="my skills"
-        className="flex h-[85vh] flex-col px-16 md:px-48 content-center justify-center dark:bg-black"
-      >
-        <Sectionheader title={"My Skills"} />
-        <div className="flex flex-wrap justify-center gap-10 dark:text-white">
-          <SkillCard
-            logo={frontEndLogo}
-            title={"Front End"}
-            skills={frontEndSkills}
-          />
-          <SkillCard
-            logo={backEndLogo}
-            title={"Back End"}
-            skills={backEndSkills}
-          />
-          <SkillCard logo={otherLogo} title={"Other"} skills={otherSkills} />
-        </div>
-        <button onClick={handleArrow3Click}>
-          <i
-            aria-label="Down Arrow Button"
-            className={`${animations.bob} fa-solid fa-angle-down fa-xl text-blue-500 dark:text-purple-400 m-auto mt-10`}
-          ></i>
-        </button>
-      </section>
-
-      <section
-        ref={featRef}
-        name="features"
-        className="flex h-[85vh] flex-col px-16 md:px-48 content-center justify-center dark:text-white dark:bg-black"
-      >
-        <div className="hide">
-          <Sectionheader title={"Projects"} />
-          <div className="xl:w-1/2 projects">
-            {projects.map((project, i) => {
-              return (
-                <Project
-                  key={"project-" + i}
-                  name={project.name}
-                  year={project.year}
-                  link={project.link}
-                  desc={project.desc}
-                  ghLink={project.ghLink}
-                />
-              );
-            })}
-          </div>
-        </div>
-      </section>
+        <div></div>
+      </main>
     </>
   );
 }

@@ -29,16 +29,16 @@ export default function Navbar() {
       <ScaleOnHover>
         <Link
           href="/"
-          className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-radial from-blue-600 to-blue-400 dark:bg-gradient-to-t dark:from-purple-500 dark:to-red-700"
+          className="text-xl uppercase font-bold text-white tracking-tighter"
         >
-          JL
+          Julian Lechner
         </Link>
       </ScaleOnHover>
       <div className="flex gap-5">
         <ScaleOnHover>
           <button
           aria-label="dark mode toggle"
-            className="w-[30px] dark:text-pink-500 border-2 rounded-lg text-blue-400 border-blue-400 dark:border-pink-500"
+            className="w-[30px] border-2 rounded-lg text-white"
             onClick={() => setTheme(theme === "light" ? "dark" : "light")}
           >
             {theme === "light" ? (
@@ -51,7 +51,7 @@ export default function Navbar() {
         <ScaleOnHover>
           <Link
             href="/blog"
-            className="text-xl font-bold text-transparent bg-clip-text bg-gradient-radial from-blue-600 to-blue-400 dark:bg-gradient-to-t dark:from-purple-500 dark:to-red-700"
+            className="text-xl font-bold "
           >
             Blog
           </Link>
