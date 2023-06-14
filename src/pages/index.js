@@ -107,10 +107,10 @@ export default function Home() {
       <main id="main">
         <Navbar></Navbar>
         <section id="hero" className="h-[800px] bg-white flex">
-          <div className="absolute w-full h-[800px]  mx-auto">
+          <div className="absolute w-full h-[800px] mx-auto hidden md:block">
             <div className="flex w-full h-full justify-center items-center">
-              <div id="hero-ball" className="w-[200px] h-[200px] relative bg-white rounded-full flex items-center justify-center px-4">
-                <div className="text-aero text-3xl text-center font-bold">LOOKING FOR WORK</div>
+              <div id="hero-ball" className="w-[100px] h-[100px] lg:w-[200px] lg:h-[200px] relative bg-white rounded-full flex items-center justify-center px-4">
+                <div className="text-aero text-[.75em] lg:text-3xl text-center font-bold">LOOKING FOR WORK</div>
               </div>
             </div>
           </div>
