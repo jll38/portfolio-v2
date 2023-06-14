@@ -100,14 +100,13 @@ export default function Home() {
     {},
   ];
 
-  
   return (
     <>
       <Head>
         <title>Julian Lechner Web Developer</title>
       </Head>
-      <div className="fixed h-screen w-screen bg-gradient-to-t from-gray-400 to-white -z-10 dark:hidden"></div>
-      <IntroAnim/>
+      <div className="fixed h-screen w-screen bg-gradient-to-t from-gray-400 to-white -z-10"></div>
+      <IntroAnim />
       <main id="main">
         <Navbar></Navbar>
         <section
@@ -204,7 +203,15 @@ export default function Home() {
           <div className="text-6xl opacity-75 hover:opacity-100">Python</div>
         </section>
 
-        <section id="about-me" className="h-[800px] bg-gray-300"></section>
+        <section id="projects" className="h-[700px] bg-gray-300 flex flex-col">
+          <div className="border w-1/2 h-1/4 flex items-center justify-center">
+            <div className="text-gray-900 tracking-tighter font-semibold text-[4em]">
+              Latest
+              <br />
+              Projects
+            </div>
+          </div>
+        </section>
         <section id="about-me" className="h-[800px] bg-white"></section>
       </main>
     </>
