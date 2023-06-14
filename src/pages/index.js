@@ -109,8 +109,13 @@ export default function Home() {
         <section id="hero" className="h-[800px] bg-white flex">
           <div className="absolute w-full h-[800px] mx-auto hidden md:block">
             <div className="flex w-full h-full justify-center items-center">
-              <div id="hero-ball" className="w-[100px] h-[100px] lg:w-[200px] lg:h-[200px] relative bg-white rounded-full flex items-center justify-center px-4">
-                <div className="text-aero text-[.75em] lg:text-3xl text-center font-bold">LOOKING FOR WORK</div>
+              <div
+                id="hero-ball"
+                className="w-[100px] h-[100px] lg:w-[200px] lg:h-[200px] relative bg-white rounded-full flex items-center justify-center px-4"
+              >
+                <div className="text-aero text-[.75em] lg:text-3xl text-center font-bold">
+                  LOOKING FOR WORK
+                </div>
               </div>
             </div>
           </div>
@@ -138,9 +143,31 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="hidden md:block w-1/2 h-full bg-cerulean"></div>
+          <div className="hidden  w-1/2 h-full bg-cerulean md:flex justify-center items-end">
+            <div className="relative">
+              <img
+                id="hero-img-julian"
+                src="/images/lechner.webp"
+                width={600}
+                height={800}
+                className=""
+              />
+            </div>
+          </div>
         </section>
-        <section></section>
+        <section
+          id="tech-stack"
+          className="h-[200px] bg-prussian flex items-center justify-around gap-10 px-24"
+        >
+          <Image src="/images/html.webp" width={75} height={50} className="opacity-75 hover:opacity-100"/>
+          <Image src="/images/css.webp" width={75} height={50} className="opacity-75 hover:opacity-100"/>
+          <Image src="/images/js.png" width={75} height={50} className="opacity-75 hover:opacity-100 rounded-lg"/>
+
+          <Image src="/images/react.webp" width={200} height={50} className="opacity-75 hover:opacity-100"/>
+          <Image src="/images/nextjs.webp" width={200} height={50} className="opacity-75 hover:opacity-100"/>
+          <div className="text-6xl opacity-75 hover:opacity-100">Python</div>
+          
+        </section>
 
         <div></div>
       </main>
