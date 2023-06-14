@@ -159,6 +159,7 @@ export default function Home() {
               <Image
                 id="hero-img-julian"
                 src="/images/lechner.webp"
+                alt="Picture of Julian Lechner"
                 width={600}
                 height={800}
                 className="relative -bottom-3"
@@ -172,18 +173,21 @@ export default function Home() {
         >
           <Image
             src="/images/html.webp"
+            alt="HTML"
             width={75}
             height={50}
             className="opacity-75 hover:opacity-100"
           />
           <Image
             src="/images/css.webp"
+            alt="CSS"
             width={75}
             height={50}
             className="opacity-75 hover:opacity-100"
           />
           <Image
             src="/images/js.png"
+            alt="JavaScript"
             width={75}
             height={50}
             className="opacity-75 hover:opacity-100 rounded-lg"
@@ -191,12 +195,14 @@ export default function Home() {
 
           <Image
             src="/images/react.webp"
+            alt="React"
             width={200}
             height={50}
             className="opacity-75 hover:opacity-100"
           />
           <Image
             src="/images/nextjs.webp"
+            alt="Next.JS"
             width={200}
             height={50}
             className="opacity-75 hover:opacity-100"

@@ -106,9 +106,9 @@ const SpotifyViewer = () => {
   }, [current, timeAgo]);
 
   return (
-    <div className="fixed right-10 bottom-10 bg-white border-cerulean border-2 px-2 py-1 flex z-40 gap-3">
+    <div className="fixed right-10 bottom-10 bg-white border-cerulean border-2 px-2 py-1 md:flex z-40 gap-3 hidden">
       <div>
-        <Image src={songImg} width={75} height={75} />
+        <Image src={songImg} alt={songTitle + " By " + songArtist + " Cover Art"} width={75} height={75} />
       </div>
       <div>
         <h3 className="text-xl text-prussian font-semibold">
