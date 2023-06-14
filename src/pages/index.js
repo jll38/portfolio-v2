@@ -112,7 +112,7 @@ export default function Home() {
         <Navbar></Navbar>
         <section
           id="hero"
-          className="h-[800px] bg-[url('/images/pexels-chris-schippers-421927.jpg')] bg-cover flex"
+          className="h-[800px] bg-[url('/images/pexels-chris-schippers-421927.webp')] bg-cover flex"
         >
           {lookingForWork ? (
             <div className="absolute w-full h-[800px] mx-auto hidden md:block">
