@@ -9,6 +9,7 @@ import SocialBox from "@/components/socialbox";
 import animations from "../styles/animations.module.css";
 import SpotifyViewer from "@/components/SongDisplay";
 import Project from "@/components/Project";
+import IntroAnim from "@/components/introAnim";
 
 import Link from "next/link";
 import Head from "next/head";
@@ -19,7 +20,7 @@ export default function Home() {
   const aboutRef = useRef(null);
   const featRef = useRef(null);
   const skillsRef = useRef(null);
-
+  const lookingForWork = true;
   //Smooth scrolls down to about section
   const handleArrow1Click = () => {
     aboutRef.current?.scrollIntoView({ behavior: "smooth" });
@@ -98,28 +99,38 @@ export default function Home() {
     },
     {},
   ];
+
+  
   return (
     <>
       <Head>
         <title>Julian Lechner Web Developer</title>
       </Head>
       <div className="fixed h-screen w-screen bg-gradient-to-t from-gray-400 to-white -z-10 dark:hidden"></div>
+      <IntroAnim/>
       <main id="main">
         <Navbar></Navbar>
-        <section id="hero" className="h-[800px] bg-white flex">
-          <div className="absolute w-full h-[800px] mx-auto hidden md:block">
-            <div className="flex w-full h-full justify-center items-center">
-              <div
-                id="hero-ball"
-                className="w-[100px] h-[100px] lg:w-[200px] lg:h-[200px] relative bg-white rounded-full flex items-center justify-center px-4"
-              >
-                <div className="text-aero text-[.75em] lg:text-3xl text-center font-bold">
-                  LOOKING FOR WORK
+        <section
+          id="hero"
+          className="h-[800px] bg-[url('/images/pexels-chris-schippers-421927.jpg')] bg-cover flex"
+        >
+          {lookingForWork ? (
+            <div className="absolute w-full h-[800px] mx-auto hidden md:block">
+              <div className="flex w-full h-full justify-center items-center">
+                <div
+                  id="hero-ball"
+                  className="w-[100px] h-[100px] lg:w-[200px] lg:h-[200px] relative bg-white rounded-full flex items-center justify-center px-4"
+                >
+                  <div className="text-aero text-[.75em] lg:text-3xl text-center font-bold">
+                    LOOKING FOR WORK
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div className="w-full md:w-1/2 h-full bg-aero flex flex-col justify-center items-center text-left md:px-0">
+          ) : (
+            <></>
+          )}
+          <div className="w-full md:w-1/2 h-full bg-aero/90 flex flex-col justify-center items-center text-left md:px-0">
             <div className="flex flex-col items-center sm:max-w-sm lg:max-w-lg sm:px-0 px-8">
               <h1 className="uppercase font-bold tracking-[-.06em] w-full text-[350%] sm:text-[400%] lg:text-[500%] leading-[.8em]">
                 Julian Lechner <br /> Front End Developer
@@ -135,7 +146,7 @@ export default function Home() {
                   Experienced developer in the New York City area
                 </div>
                 <div className="tracking-normal font-medium">
-                  I&apos;m a frontend developer with a commitment to building
+                  I&apos;m a Front End developer with a commitment to building
                   user-centric, responsive websites and applications that
                   prioritize user experience without sacrificing speed or
                   functionality.
@@ -143,33 +154,58 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="hidden  w-1/2 h-full bg-cerulean md:flex justify-center items-end">
+          <div className="hidden w-1/2 h-full bg-cerulean/75 md:flex justify-center items-end overflow-hidden">
             <div className="relative">
-              <img
+              <Image
                 id="hero-img-julian"
                 src="/images/lechner.webp"
                 width={600}
                 height={800}
-                className=""
+                className="relative -bottom-3"
               />
             </div>
           </div>
         </section>
         <section
           id="tech-stack"
-          className="h-[200px] bg-prussian flex items-center justify-around gap-10 px-24"
+          className="bg-prussian flex flex-wrap items-center justify-around gap-20 px-24 py-8"
         >
-          <Image src="/images/html.webp" width={75} height={50} className="opacity-75 hover:opacity-100"/>
-          <Image src="/images/css.webp" width={75} height={50} className="opacity-75 hover:opacity-100"/>
-          <Image src="/images/js.png" width={75} height={50} className="opacity-75 hover:opacity-100 rounded-lg"/>
+          <Image
+            src="/images/html.webp"
+            width={75}
+            height={50}
+            className="opacity-75 hover:opacity-100"
+          />
+          <Image
+            src="/images/css.webp"
+            width={75}
+            height={50}
+            className="opacity-75 hover:opacity-100"
+          />
+          <Image
+            src="/images/js.png"
+            width={75}
+            height={50}
+            className="opacity-75 hover:opacity-100 rounded-lg"
+          />
 
-          <Image src="/images/react.webp" width={200} height={50} className="opacity-75 hover:opacity-100"/>
-          <Image src="/images/nextjs.webp" width={200} height={50} className="opacity-75 hover:opacity-100"/>
+          <Image
+            src="/images/react.webp"
+            width={200}
+            height={50}
+            className="opacity-75 hover:opacity-100"
+          />
+          <Image
+            src="/images/nextjs.webp"
+            width={200}
+            height={50}
+            className="opacity-75 hover:opacity-100"
+          />
           <div className="text-6xl opacity-75 hover:opacity-100">Python</div>
-          
         </section>
 
-        <div></div>
+        <section id="about-me" className="h-[800px] bg-gray-300"></section>
+        <section id="about-me" className="h-[800px] bg-white"></section>
       </main>
     </>
   );

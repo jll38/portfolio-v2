@@ -16,7 +16,8 @@ module.exports = {
       colors: {
         'aero': '#05b2dc',
         'cerulean': '#087CA7',
-        'prussian': '#033860'
+        'prussian': '#033860',
+        'federal': '#031A6B'
       }
     },
   },
