@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 export function ProjectCard({title, img, link, ghLink}) {
-  return <div className="w-[425px]">
+  return <div className="w-[350px] sm:w-[425px]">
             <div class="text-white font-medium break-words p-5">
               <div>
                 <div class="truncate">

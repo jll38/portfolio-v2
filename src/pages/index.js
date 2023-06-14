@@ -129,7 +129,7 @@ export default function Home() {
           <div className="w-full md:w-1/2 h-full bg-aero/90 flex flex-col justify-center items-center text-left md:px-0">
             <div className="flex flex-col items-center sm:max-w-sm lg:max-w-lg sm:px-0 px-8">
               <h1 className="uppercase font-bold tracking-[-.06em] w-full text-[350%] sm:text-[400%] lg:text-[500%] leading-[.8em]">
-                Julian Lechner <br /> Front End Developer
+                Julian Lechner <br /> Frontend Developer
               </h1>
               <div
                 id="hero-about"
@@ -242,33 +242,83 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="border lg:w-[1024px] flex flex-wrap my-10">
-            <div className="w-1/2 border border-red-500 p-6">
-              <div className="text-2xl font-semibold">
-                  Get to know me!
+          <div className="border-2 lg:w-[1024px] flex flex-wrap justify-center my-10">
+            <div className="w-[350px] sm:w-[500px] sm:p-6">
+              <div className="text-2xl font-semibold ">About Myself</div>
+              <div className="font-medium mt-4">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                molestie suscipit justo, id vestibulum massa blandit in. Etiam
+                ullamcorper in nisl in blandit. Suspendisse at nisi non neque
+                porta vestibulum. Proin rutrum, est non consequat facilisis,
+                enim ante fringilla nisl, sit amet ullamcorper dolor nunc ac
+                quam. Donec id enim ac nunc aliquam posuere. Maecenas aliquam
+                dictum rutrum. Vestibulum tempus metus nec dui faucibus, non
+                efficitur nisl posuere. Donec risus arcu, laoreet ut nunc
+                congue, auctor efficitur metus. Mauris pellentesque, enim quis
+                elementum tempor, nibh nunc imperdiet augue, in faucibus eros
+                ligula ut felis. Integer at tempus sapien. Donec eleifend
+                consequat diam ac feugiat.
               </div>
             </div>
-            <div className="w-1/2 border border-blue-500 p-6">
-              <div className="text-2xl font-semibold"><i class="fa-solid fa-graduation-cap"></i> {" "}Education</div>
+            <div className="w-[350px] sm:w-[500px] sm:p-6">
+              <div className="text-2xl font-semibold">
+                <i class="fa-solid fa-graduation-cap"></i> Education
+              </div>
               <div className="flex justify-between">
                 <div>
-                  <div className="text-lg">
+                  <div className="text-[.8em] sm:text-lg">
                     New Jersey Institute of Technology
                   </div>
-                  <div className="text-gray-200 text-xs">
+                  <div className="text-gray-200 text-[.7em] sm:text-xs">
                     Bachelor of Science in Information Technology
                   </div>
-                  <div className="text-gray-200 text-xs">
+                  <div className="text-gray-200 text-[.7em] sm:text-xs">
                     Mobile & Web Minor
                   </div>
                 </div>
                 <div>
-                  <div className="text-lg">Newark, NJ</div>
-                  <div className="text-xs text-right">Class of 2024</div>
+                  <div className="text-[.8em] sm:text-lg">Newark, NJ</div>
+                  <div className="text-[.7em] text-right">Class of 2024</div>
                 </div>
               </div>
-              <div className="text-2xl font-semibold mt-24"><i class="fa-solid fa-code"></i> {" "}Skills</div>
-
+              <div className="text-2xl font-semibold mt-6">
+                <i class="fa-solid fa-code"></i> Skills
+                <div class="text-black flex flex-wrap text-[0.65rem] mt-2">
+                  <div class="bg-aero text-gray-200 text-[1.04rem] font-semibold mb-4 mr-4 py-3 px-5 rounded">
+                    HTML
+                  </div>
+                  <div class="bg-aero text-gray-200 text-[1.04rem] font-semibold mb-4 mr-4 py-3 px-5 rounded">
+                    CSS
+                  </div>
+                  <div class="bg-aero text-gray-200 text-[1.04rem] font-semibold mb-4 mr-4 py-3 px-5 rounded">
+                    JavaScript
+                  </div>
+                  <div class="bg-aero text-gray-200 text-[1.04rem] font-semibold mb-4 mr-4 py-3 px-5 rounded">
+                    React
+                  </div>
+                  <div class="bg-aero text-gray-200 text-[1.04rem] font-semibold mb-4 mr-4 py-3 px-5 rounded">
+                    GIT
+                  </div>
+                  <div class="bg-aero text-gray-200 text-[1.04rem] font-semibold mb-4 mr-4 py-3 px-5 rounded">
+                    GitHub
+                  </div>
+                  <div class="bg-aero text-gray-200 text-[1.04rem] font-semibold mb-4 mr-4 py-3 px-5 rounded">
+                    Responsive
+                  </div>
+                  <div class="bg-aero text-gray-200 text-[1.04rem] font-semibold mb-4 mr-4 py-3 px-5 rounded">
+                    SEO
+                  </div>
+                  <div class="bg-aero text-gray-200 text-[1.04rem] font-semibold mb-4 mr-4 py-3 px-5 rounded">
+                    Linux
+                  </div>
+                  <div class="bg-aero text-gray-200 text-[1.04rem] font-semibold mb-4 mr-4 py-3 px-5 rounded">
+                    REST APIs
+                  </div>
+                  <div class="bg-aero text-gray-200 text-[1.04rem] font-semibold mb-4 mr-4 py-3 px-5 rounded">
+                    SQL
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </section>
