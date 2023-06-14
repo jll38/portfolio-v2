@@ -106,12 +106,12 @@ const SpotifyViewer = () => {
   }, [current, timeAgo]);
 
   return (
-    <div className="fixed right-10 bottom-10 bg-white border-cerulean border-2 p-1 md:flex z-40 gap-3 hidden">
+    <div className="fixed right-10 bottom-10 bg-white  border-2 p md:flex z-40 gap-3  hidden">
       <div>
-        <Image src={songImg} alt={songTitle + " By " + songArtist + " Cover Art"} width={75} height={75} />
+        <Image src={songImg} alt={songTitle + " By " + songArtist + " Cover Art"} width={77} height={77} />
       </div>
       <div>
-        <h3 className="text-xl text-prussian font-semibold">
+        <h3 className="text-xl text-prussian font-semibold mr-10">
           <i className="fa-brands fa-spotify fa-md "></i>{" "}
           {current ? "I'm Currently Listening To" : "I Last Listened To"}{" "}
         </h3>

@@ -28,14 +28,14 @@ export default function Blog({ allPostsData }) {
         id="fade-out"
         className="fixed w-screen h-screen bg-aero opacity-100 transition-all duration-500 z-50"
       ></div>
-      <div className="flex min-h-screen flex-col px-16 md:px-48 content-center justify-center items-center dark:bg-black">
+      <div className="min-h-screen bg-[url('/images/pexels-chris-schippers-421927.webp')] bg-cover z-[1]">
+        <div className="bg-prussian/75 w-screen h-screen flex flex-col px-16 md:px-48 content-center justify-center items-center">
         <Navbar />
-        <SocialBox />
         <section className="flex flex-col">
-          <Link href="/" className="text-gray-800 dark:text-white">
+          <Link href="/" className="text-white font-semibold">
             &#8592; Go Home
           </Link>
-          <h1 className="text-4xl text-transparent bg-clip-text bg-gradient-to-t from-blue-600 to-blue-400 dark:from-purple-500 dark:to-red-700 font-bold mb-2 divider">
+          <h1 className="text-4xl font-bold mb-2 divider">
             Blog
           </h1>
           <ul>
@@ -43,7 +43,7 @@ export default function Blog({ allPostsData }) {
               <li key={id}>
                 <Link
                   href={`/blog/${id}`}
-                  className="text-xl text-transparent bg-clip-text bg-gradient-to-t from-cyan-400 to-blue-600 dark:from-purple-500 dark:to-yellow-500 font-bold"
+                  className="text-xl font-medium"
                 >
                   {title}
                 </Link>
@@ -55,6 +55,7 @@ export default function Blog({ allPostsData }) {
             ))}
           </ul>
         </section>
+        </div>
       </div>
     </>
   );

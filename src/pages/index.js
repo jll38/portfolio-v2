@@ -1,3 +1,4 @@
+import { ProjectCard } from "./../components/ProjectCard";
 import { SkillCard } from "./../components/SkillCard";
 import { Sectionheader } from "./../components/sectionheader";
 import { useRef, useState, useEffect } from "react";
@@ -70,34 +71,29 @@ export default function Home() {
 
   const projects = [
     {
-      name: "Atlas Gym",
+      name: "Atlas Gym (Business Site)",
       desc: "This project aims to develop a modern and user-friendly front-end website for Atlas Gym. It includes features such as membership information, class schedules, trainer profiles, testimonials, contact details, and social media integration.",
       link: "https://gym-site-psi.vercel.app",
+      img: "/images/atlas-gym.webp",
       ghLink: "https://github.com/jll38/gym-site",
       year: 2023,
     },
     {
-      name: "Quizard",
+      name: "Quizard (Quiz Platform)",
       desc: "Interactive quiz platform built with React, ChakraUI, and Python Flask, this platform offers an engaging and seamless user experience.",
       link: "https://quizard-rosy.vercel.app/",
+      img: "/images/quizard.webp",
       ghLink: "https://github.com/jll38/quizard",
       year: 2023,
     },
     {
-      name: "Netflix Clone",
-      desc: "A recreation of the Netflix webpage created with Next.js and Tailwind.",
-      link: "https://netflix-clone-git-main-jll38.vercel.app/",
-      ghLink: "https://github.com/jll38/netflix-clone",
-      year: 2023,
-    },
-    {
-      name: "Home Sync Hub",
+      name: "Home Sync Hub (Marketing Site)",
       desc: "An affiliate marketing blog website that focuses on Smart Home technologies. Developed in NextJS and utilizes the Sanity content management system.",
       link: "https://homesynchub.com/",
+      img: "/images/hsh.webp",
       ghLink: "https://github.com/jll38/affiliate-marketing-site",
       year: 2023,
     },
-    {},
   ];
 
   return (
@@ -210,53 +206,72 @@ export default function Home() {
           <div className="text-6xl opacity-75 hover:opacity-100">Python</div>
         </section>
 
-        <section id="projects" className="h-[700px] bg-gray-300 flex flex-col">
-          <div className="w-1/2 h-1/4 flex items-center justify-center">
-            <div className="text-gray-900 tracking-tighter font-semibold text-[4em]">
-              Latest
-              Projects
-            </div>
-          </div>
-          <div className="w-[425px]">
-            <div class="text-white font-medium break-words p-5">
-              <div>
-                <div class="truncate">
-                  <div class="text-center rounded  truncate">
-                    {" "}
-                    <Link
-                      href="https://gym-site-psi.vercel.app"
-                      class="cursor-pointer"
-                      target={"_blank"}
-                    >
-                      {" "}
-                      <img
-                        src="/images/atlas-gym.webp"
-                        class="align-middle rounded overflow-clip object-cover"
-                      />{" "}
-                    </Link>
-                  </div>
-                  <div class="bg-cerulean p-9 rounded">
-                    <h3 class="clear-both text-[1.35rem] font-bold mb-1   truncate">
-                      Atlas Gym (Business Site)
-                    </h3>
-                    <div>
-                      {" "}
-                      <span class="text-[0.94rem]">
-                        <a
-                          href="https://tamalsen.dev/portfolio-category/web-dev/"
-                          class="cursor-pointer"
-                        >
-                          Web Development
-                        </a>
-                      </span>
-                    </div>
-                  </div>
-                </div>
+        <section
+          id="projects"
+          className="bg-[url('/images/hex.webp')] bg-repeat"
+        >
+          <div className="bg-gray-300/75 flex flex-col py-4">
+            <div className="flex flex-col justify-center items-center">
+              <div className="text-gray-900 tracking-tighter font-semibold text-[2em]">
+                Latest Projects
+              </div>
+              <div className="flex flex-wrap justify-center">
+                {projects.map((project, i) => (
+                  <ProjectCard
+                    key={"Project-" + i}
+                    title={project.name}
+                    img={project.img}
+                    link={project.link}
+                    ghLink={project.ghLink}
+                  />
+                ))}
               </div>
             </div>
           </div>
         </section>
-        <section id="about-me" className="h-[800px] bg-white"></section>
+        <section
+          id="about-me"
+          className="bg-cerulean flex items-center flex-col py-12"
+        >
+          <div className="flex flex-col items-center w-full gap-4">
+            <h2 className="uppercase font-semibold text-4xl">About Me</h2>
+            <div className="h-[4px] w-[100px] bg-aero"></div>
+            <div className="w-1/2 text-md text-center font-medium text-gray-200">
+              Here you&apos;ll get to know me, what I do, and my technical
+              skills in front end development
+            </div>
+          </div>
+
+          <div className="border lg:w-[1024px] flex flex-wrap my-10">
+            <div className="w-1/2 border border-red-500 p-6">
+              <div className="text-2xl font-semibold">
+                  Get to know me!
+              </div>
+            </div>
+            <div className="w-1/2 border border-blue-500 p-6">
+              <div className="text-2xl font-semibold"><i class="fa-solid fa-graduation-cap"></i> {" "}Education</div>
+              <div className="flex justify-between">
+                <div>
+                  <div className="text-lg">
+                    New Jersey Institute of Technology
+                  </div>
+                  <div className="text-gray-200 text-xs">
+                    Bachelor of Science in Information Technology
+                  </div>
+                  <div className="text-gray-200 text-xs">
+                    Mobile & Web Minor
+                  </div>
+                </div>
+                <div>
+                  <div className="text-lg">Newark, NJ</div>
+                  <div className="text-xs text-right">Class of 2024</div>
+                </div>
+              </div>
+              <div className="text-2xl font-semibold mt-24"><i class="fa-solid fa-code"></i> {" "}Skills</div>
+
+            </div>
+          </div>
+        </section>
       </main>
     </>
   );
