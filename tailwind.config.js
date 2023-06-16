@@ -17,7 +17,8 @@ module.exports = {
         'aero': '#05b2dc',
         'cerulean': '#087CA7',
         'prussian': '#033860',
-        'federal': '#031A6B'
+        'federal': '#031A6B',
+        'polynesian': '#004385'
       }
     },
   },

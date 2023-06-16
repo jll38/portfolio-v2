@@ -29,7 +29,8 @@ export default function IntroAnim(showAnim) {
         <div
           id="cerulean"
           className={`h-full w-[0px] bg-cerulean transition-all duration-300 z-[51] fixed`}
-        ></div>
+        >
+        </div>
         <div
           id="prussian"
           className={`h-full w-[0px] bg-prussian transition-all duration-300 z-[52] fixed`}

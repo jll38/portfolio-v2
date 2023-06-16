@@ -205,7 +205,6 @@ export default function Home() {
           />
           <div className="text-6xl opacity-75 hover:opacity-100">Python</div>
         </section>
-
         <section
           id="projects"
           className="bg-[url('/images/hex.webp')] bg-repeat"
@@ -242,22 +241,21 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="border-2 lg:w-[1024px] flex flex-wrap justify-center my-10">
+          <div className="lg:border-2 lg:w-[1024px] flex flex-wrap justify-center my-10">
             <div className="w-[350px] sm:w-[500px] sm:p-6">
-              <div className="text-2xl font-semibold ">About Myself</div>
-              <div className="font-medium mt-4">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                molestie suscipit justo, id vestibulum massa blandit in. Etiam
-                ullamcorper in nisl in blandit. Suspendisse at nisi non neque
-                porta vestibulum. Proin rutrum, est non consequat facilisis,
-                enim ante fringilla nisl, sit amet ullamcorper dolor nunc ac
-                quam. Donec id enim ac nunc aliquam posuere. Maecenas aliquam
-                dictum rutrum. Vestibulum tempus metus nec dui faucibus, non
-                efficitur nisl posuere. Donec risus arcu, laoreet ut nunc
-                congue, auctor efficitur metus. Mauris pellentesque, enim quis
-                elementum tempor, nibh nunc imperdiet augue, in faucibus eros
-                ligula ut felis. Integer at tempus sapien. Donec eleifend
-                consequat diam ac feugiat.
+              <div className="text-2xl font-semibold">About Myself</div>
+              <div className="h-[4px] w-[150px] bg-aero"></div>
+              <div className="font-medium mt-4 text-lg">
+                I&apos;m your friendly neighborhood frontend developer,
+                developing responsive and efficient websites in order to provide
+                an excellent user experience.
+                <br />
+                <br />
+                For as long as I can remember, I&apos;ve loved solving complex
+                problems and creating things that work. When I&apos;m not developing project
+                or working towards my degree, you&apos;ll find me in the gym, going out with
+                friends, on motorcycle rides, and trying to live life to the
+                fullest.
               </div>
             </div>
             <div className="w-[350px] sm:w-[500px] sm:p-6">
@@ -294,6 +292,9 @@ export default function Home() {
                     JavaScript
                   </div>
                   <div class="bg-aero text-gray-200 text-[1.04rem] font-semibold mb-4 mr-4 py-3 px-5 rounded">
+                    Node.JS
+                  </div>
+                  <div class="bg-aero text-gray-200 text-[1.04rem] font-semibold mb-4 mr-4 py-3 px-5 rounded">
                     React
                   </div>
                   <div class="bg-aero text-gray-200 text-[1.04rem] font-semibold mb-4 mr-4 py-3 px-5 rounded">
@@ -314,14 +315,46 @@ export default function Home() {
                   <div class="bg-aero text-gray-200 text-[1.04rem] font-semibold mb-4 mr-4 py-3 px-5 rounded">
                     REST APIs
                   </div>
+
                   <div class="bg-aero text-gray-200 text-[1.04rem] font-semibold mb-4 mr-4 py-3 px-5 rounded">
                     SQL
+                  </div>
+                  <div class="bg-aero text-gray-200 text-[1.04rem] font-semibold mb-4 mr-4 py-3 px-5 rounded">
+                    CMS
+                  </div>
+                  <div class="bg-aero text-gray-200 text-[1.04rem] font-semibold mb-4 mr-4 py-3 px-5 rounded">
+                    Docker
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </section>
+        <section
+          id="contact"
+          className="bg-cerulean flex items-center flex-col py-12 h-[400px]"
+        >
+          <div className="flex flex-col items-center w-full gap-4">
+            <h2 className="uppercase font-semibold text-4xl">Contact</h2>
+            <div className="h-[4px] w-[100px] bg-aero"></div>
+            <div className="w-1/2 text-2xl text-center font-medium text-gray-200">
+              Get in touch with me on <br />
+              <Link
+                href="https://linkedin.com/in/julianllechner"
+                className="font-bold"
+              >
+                <i className="fa-brands fa-linkedin"></i> LinkedIn
+              </Link>
+              <br />
+              <Link
+                href="mailto:jll38@njit.edu"
+                className="font-bold"
+              >
+                <i className="fa-solid fa-envelope"></i> Email
+              </Link>
+            </div>
+          </div>
+        </section>{" "}
       </main>
     </>
   );
