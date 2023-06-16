@@ -2,27 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
-}
-
 body,
 html {
   margin: 0;
@@ -87,18 +66,7 @@ html {
   float: left;
   position: relative;
 }
-@media (min-width: 760px) and (max-width: 1240px) {
-  /* hide divider on small screens */
-  .divider::after {
-    display: none !important;
-  }
-}
-@media (max-width: 400px) {
-  /* hide divider on small screens */
-  .divider::after {
-    display: none !important;
-  }
-}
+
 .divider:after {
   content: "";
   display: block;
@@ -108,7 +76,7 @@ html {
   width: 4em;
   height: 2px;
   margin-left: 20px;
-  background-color: rgb(112, 112, 112);
+  background-color: rgb(255, 255, 255);
   float: right;
 }
 
@@ -234,4 +202,14 @@ html {
 
 .projects:nth-child(4){
   transition-delay: 600ms;
+}
+
+#hero-ball{
+  transform: rotate(-15deg);
+  box-shadow: #1a1a1a7e 2px 6px 16px;
+}
+
+#hero-img-julian{
+    filter: drop-shadow(0px 4px 8px rgba(0, 0, 0, .75));
+    transform: rotate(-4deg)
 }

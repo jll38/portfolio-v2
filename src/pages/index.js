@@ -1,3 +1,4 @@
+import { ProjectCard } from "./../components/ProjectCard";
 import { SkillCard } from "./../components/SkillCard";
 import { Sectionheader } from "./../components/sectionheader";
 import { useRef, useState, useEffect } from "react";
@@ -9,6 +10,7 @@ import SocialBox from "@/components/socialbox";
 import animations from "../styles/animations.module.css";
 import SpotifyViewer from "@/components/SongDisplay";
 import Project from "@/components/Project";
+import IntroAnim from "@/components/introAnim";
 
 import Link from "next/link";
 import Head from "next/head";
@@ -19,7 +21,7 @@ export default function Home() {
   const aboutRef = useRef(null);
   const featRef = useRef(null);
   const skillsRef = useRef(null);
-
+  const lookingForWork = true;
   //Smooth scrolls down to about section
   const handleArrow1Click = () => {
     aboutRef.current?.scrollIntoView({ behavior: "smooth" });
@@ -69,169 +71,291 @@ export default function Home() {
 
   const projects = [
     {
-      name: "Atlas Gym",
+      name: "Atlas Gym (Business Site)",
       desc: "This project aims to develop a modern and user-friendly front-end website for Atlas Gym. It includes features such as membership information, class schedules, trainer profiles, testimonials, contact details, and social media integration.",
       link: "https://gym-site-psi.vercel.app",
+      img: "/images/atlas-gym.webp",
       ghLink: "https://github.com/jll38/gym-site",
       year: 2023,
     },
     {
-      name: "Netflix Clone",
-      desc: "A recreation of the Netflix webpage created with Next.js and Tailwind.",
-      link: "https://netflix-clone-git-main-jll38.vercel.app/",
-      ghLink: "https://github.com/jll38/netflix-clone",
-      year: 2023,
-    },
-    {
-      name: "Home Sync Hub",
-      desc: "An affiliate marketing blog website that focuses on Smart Home technologies. Developed in NextJS and utilizes the Sanity content management system.",
-      link: "https://homesynchub.com/",
-      ghLink: "https://github.com/jll38/affiliate-marketing-site",
-      year: 2023,
-    },
-    {
-      name: "Quizard",
+      name: "Quizard (Quiz Platform)",
       desc: "Interactive quiz platform built with React, ChakraUI, and Python Flask, this platform offers an engaging and seamless user experience.",
-      link: "https://quizard-rosy.vercel.app",
+      link: "https://quizard-rosy.vercel.app/",
+      img: "/images/quizard.webp",
       ghLink: "https://github.com/jll38/quizard",
       year: 2023,
     },
+    {
+      name: "Home Sync Hub (Marketing Site)",
+      desc: "An affiliate marketing blog website that focuses on Smart Home technologies. Developed in NextJS and utilizes the Sanity content management system.",
+      link: "https://homesynchub.com/",
+      img: "/images/hsh.webp",
+      ghLink: "https://github.com/jll38/affiliate-marketing-site",
+      year: 2023,
+    },
   ];
+
   return (
     <>
       <Head>
         <title>Julian Lechner Web Developer</title>
       </Head>
-      <div className="fixed h-screen w-screen bg-gradient-to-t from-gray-400 to-white -z-10 dark:hidden"></div>
-      <main
-        id="main"
-        className="flex h-[90vh] flex-col items-center p-6 md:p-24 content-center justify-center text-white dark:bg-black"
-      >
+      <div className="fixed h-screen w-screen bg-gradient-to-t from-gray-400 to-white -z-10"></div>
+      <IntroAnim />
+      <SpotifyViewer />
+      <main id="main">
         <Navbar></Navbar>
-        <SocialBox />
-        <div className="z-10">
-          <h1 className="text-4xl md:text-6xl text-gray-800 dark:text-white ">
-            Hi, I&apos;m
-          </h1>
-          <div className="text-transparent bg-clip-text bg-gradient-radial from-blue-600 to-blue-400 dark:bg-gradient-to-t dark:from-purple-500 dark:to-red-700 ">
-            <h1 className="text-5xl md:text-8xl font-bold" id="hero-name">
-              Julian Lechner
-            </h1>
-            <h1 className="text-5xl md:text-8xl font-bold">Web Developer</h1>
-          </div>
-          <p className="mb-4 text-xl font-normal text-gray-800 dark:text-white">
-            Responsive,{" "}
-            <span className="dark:text-transparent dark:bg-clip-text text-blue-600 dark:bg-gradient-to-t dark:from-purple-500 dark:to-red-700">
-              Reliable
-            </span>
-            , and Robust Web Development.
-          </p>
-        </div>
-        <button onClick={handleArrow1Click}>
-          <i
-            aria-label="Down Arrow Button to About Section"
-            className={`${animations.bob} fa-solid fa-angle-down fa-xl text-blue-500 dark:text-purple-400`}
-          ></i>
-        </button>
-      </main>
-
-      <section
-        ref={aboutRef}
-        name="about"
-        className="flex h-[85vh] flex-col px-16 content-center justify-center items-center text-gray-700 dark:bg-black dark:text-white bg-opacity-100"
-      >
-        <div className="flex flex-wrap mt-20 hide justify-center">
-          <div className="w-full md:max-w-[550px]">
-            <Sectionheader title={"About Me"} />
-            <div>
-              <div name="about-text" className="text-lg mt-8 pr-3">
-                <p>
-                  Hello! My name is{" "}
-                  <span className="dark:text-transparent bg-clip-text bg-gradient-radial text-blue-500 dark:bg-gradient-to-t dark:from-purple-500 dark:to-red-700 font-bold">
-                    Julian Lechner
-                  </span>
-                  , and I am an enthusiastic web developer pursuing a Bachelor
-                  of Science in Information Technology at New Jersey Institute
-                  of Technology. As of now, I am currently seeking an internship
-                  position where I can apply my skills.
-                </p>
-                <br />
-                <p>
-                  Apart from my technical skills, I take pride in my leadership
-                  abilities, demonstrated through my involvement in my
-                  fraternity, Phi Sigma Kappa.
-                </p>
-                <SpotifyViewer />
+        <section
+          id="hero"
+          className="h-[800px] bg-[url('/images/pexels-chris-schippers-421927.webp')] bg-cover flex"
+        >
+          {lookingForWork ? (
+            <div className="absolute w-full h-[800px] mx-auto hidden md:block">
+              <div className="flex w-full h-full justify-center items-center">
+                <div
+                  id="hero-ball"
+                  className="w-[100px] h-[100px] lg:w-[200px] lg:h-[200px] relative bg-white rounded-full flex items-center justify-center px-4"
+                >
+                  <div className="text-aero text-[.75em] lg:text-3xl text-center font-bold">
+                    LOOKING FOR WORK
+                  </div>
+                </div>
+              </div>
+            </div>
+          ) : (
+            <></>
+          )}
+          <div className="w-full md:w-1/2 h-full bg-aero/90 flex flex-col justify-center items-center text-left md:px-0">
+            <div className="flex flex-col items-center sm:max-w-sm lg:max-w-lg sm:px-0 px-8">
+              <h1 className="uppercase font-bold tracking-[-.06em] w-full text-[350%] sm:text-[400%] lg:text-[500%] leading-[.8em]">
+                Julian Lechner <br /> Frontend Developer
+              </h1>
+              <div
+                id="hero-about"
+                className="flex flex-col mt-12 font-semibold w-full"
+              >
+                <div className="text-prussian text-[1.2em] sm:text-[.8em] md:text-[1em] mb-2">
+                  &#47;&#47; ABOUT ME
+                </div>
+                <div className="md:text-[1.6em] sm:text-[2em] text-[2em]">
+                  Experienced developer in the New York City area
+                </div>
+                <div className="tracking-normal font-medium">
+                  I&apos;m a Front End developer with a commitment to building
+                  user-centric, responsive websites and applications that
+                  prioritize user experience without sacrificing speed or
+                  functionality.
+                </div>
               </div>
             </div>
           </div>
-          <div className="flex items-end relative w-[425px] h-[400px]">
-            <Image
-              className=" rounded-md bg-gradient-to-r dark:from-pink-500 dark:via-red-500 dark:to-yellow-400 from-blue-600 via-orange-400 to-blue-400 p-1 "
-              src="/images/myself.png"
-              alt="Picture of myself"
-              fill
-            ></Image>
+          <div className="hidden w-1/2 h-full bg-cerulean/75 md:flex justify-center items-end overflow-hidden">
+            <div className="relative">
+              <Image
+                id="hero-img-julian"
+                src="/images/lechner.webp"
+                alt="Picture of Julian Lechner"
+                width={600}
+                height={800}
+                className="relative -bottom-3"
+              />
+            </div>
           </div>
-        </div>
-        <button onClick={handleArrow2Click}>
-          <i
-            aria-label="Down Arrow Button"
-            className={`${animations.bob} fa-solid fa-angle-down fa-xl text-blue-500 dark:text-purple-400 m-auto mt-10`}
-          ></i>
-        </button>
-      </section>
-
-      <section
-        ref={skillsRef}
-        name="my skills"
-        className="flex h-[85vh] flex-col px-16 md:px-48 content-center justify-center dark:bg-black"
-      >
-        <Sectionheader title={"My Skills"} />
-        <div className="flex flex-wrap justify-center gap-10 dark:text-white">
-          <SkillCard
-            logo={frontEndLogo}
-            title={"Front End"}
-            skills={frontEndSkills}
+        </section>
+        <section
+          id="tech-stack"
+          className="bg-prussian flex flex-wrap items-center justify-around gap-20 px-24 py-10"
+        >
+          <Image
+            src="/images/html.webp"
+            alt="HTML"
+            width={75}
+            height={50}
+            className="opacity-75 hover:opacity-100"
           />
-          <SkillCard
-            logo={backEndLogo}
-            title={"Back End"}
-            skills={backEndSkills}
+          <Image
+            src="/images/css.webp"
+            alt="CSS"
+            width={75}
+            height={50}
+            className="opacity-75 hover:opacity-100"
           />
-          <SkillCard logo={otherLogo} title={"Other"} skills={otherSkills} />
-        </div>
-        <button onClick={handleArrow3Click}>
-          <i
-            aria-label="Down Arrow Button"
-            className={`${animations.bob} fa-solid fa-angle-down fa-xl text-blue-500 dark:text-purple-400 m-auto mt-10`}
-          ></i>
-        </button>
-      </section>
+          <Image
+            src="/images/js.png"
+            alt="JavaScript"
+            width={75}
+            height={50}
+            className="opacity-75 hover:opacity-100 rounded-lg"
+          />
 
-      <section
-        ref={featRef}
-        name="features"
-        className="flex h-[85vh] flex-col px-16 md:px-48 content-center justify-center dark:text-white dark:bg-black"
-      >
-        <div className="hide">
-          <Sectionheader title={"Projects"} />
-          <div className="xl:w-1/2 projects">
-            {projects.map((project, i) => {
-              return (
-                <Project
-                  key={"project-" + i}
-                  name={project.name}
-                  year={project.year}
-                  link={project.link}
-                  desc={project.desc}
-                  ghLink={project.ghLink}
-                />
-              );
-            })}
+          <Image
+            src="/images/react.webp"
+            alt="React"
+            width={200}
+            height={50}
+            className="opacity-75 hover:opacity-100"
+          />
+          <Image
+            src="/images/nextjs.webp"
+            alt="Next.JS"
+            width={200}
+            height={50}
+            className="opacity-75 hover:opacity-100"
+          />
+          <div className="text-6xl opacity-75 hover:opacity-100">Python</div>
+        </section>
+        <section
+          id="projects"
+          className="bg-[url('/images/hex.webp')] bg-repeat"
+        >
+          <div className="bg-gray-300/75 flex flex-col py-4">
+            <div className="flex flex-col justify-center items-center">
+              <div className="text-gray-900 tracking-tighter font-semibold text-[2em]">
+                Latest Projects
+              </div>
+              <div className="flex flex-wrap justify-center">
+                {projects.map((project, i) => (
+                  <ProjectCard
+                    key={"Project-" + i}
+                    title={project.name}
+                    img={project.img}
+                    link={project.link}
+                    ghLink={project.ghLink}
+                  />
+                ))}
+              </div>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+        <section
+          id="about-me"
+          className="bg-cerulean flex items-center flex-col py-12"
+        >
+          <div className="flex flex-col items-center w-full gap-4">
+            <h2 className="uppercase font-semibold text-4xl">About Me</h2>
+            <div className="h-[4px] w-[100px] bg-aero"></div>
+            <div className="w-1/2 text-md text-center font-medium text-gray-200">
+              Here you&apos;ll get to know me, what I do, and my technical
+              skills in front end development
+            </div>
+          </div>
+
+          <div className="lg:border-2 lg:w-[1024px] flex flex-wrap justify-center my-10">
+            <div className="w-[350px] sm:w-[500px] sm:p-6">
+              <div className="text-2xl font-semibold">About Myself</div>
+              <div className="h-[4px] w-[150px] bg-aero"></div>
+              <div className="font-medium mt-4 text-lg">
+                I&apos;m your friendly neighborhood frontend developer,
+                developing responsive and efficient websites in order to provide
+                an excellent user experience.
+                <br />
+                <br />
+                For as long as I can remember, I&apos;ve loved solving complex
+                problems and creating things that work. When I&apos;m not developing project
+                or working towards my degree, you&apos;ll find me in the gym, going out with
+                friends, on motorcycle rides, and trying to live life to the
+                fullest.
+              </div>
+            </div>
+            <div className="w-[350px] sm:w-[500px] sm:p-6">
+              <div className="text-2xl font-semibold">
+                <i class="fa-solid fa-graduation-cap"></i> Education
+              </div>
+              <div className="flex justify-between">
+                <div>
+                  <div className="text-[.8em] sm:text-lg">
+                    New Jersey Institute of Technology
+                  </div>
+                  <div className="text-gray-200 text-[.7em] sm:text-xs">
+                    Bachelor of Science in Information Technology
+                  </div>
+                  <div className="text-gray-200 text-[.7em] sm:text-xs">
+                    Mobile & Web Minor
+                  </div>
+                </div>
+                <div>
+                  <div className="text-[.8em] sm:text-lg">Newark, NJ</div>
+                  <div className="text-[.7em] text-right">Class of 2024</div>
+                </div>
+              </div>
+              <div className="text-2xl font-semibold mt-6">
+                <i class="fa-solid fa-code"></i> Skills
+                <div class="text-black flex flex-wrap text-[0.65rem] mt-2">
+                  <div class="bg-aero text-gray-200 text-[1.04rem] font-semibold mb-4 mr-4 py-3 px-5 rounded">
+                    HTML
+                  </div>
+                  <div class="bg-aero text-gray-200 text-[1.04rem] font-semibold mb-4 mr-4 py-3 px-5 rounded">
+                    CSS
+                  </div>
+                  <div class="bg-aero text-gray-200 text-[1.04rem] font-semibold mb-4 mr-4 py-3 px-5 rounded">
+                    JavaScript
+                  </div>
+                  <div class="bg-aero text-gray-200 text-[1.04rem] font-semibold mb-4 mr-4 py-3 px-5 rounded">
+                    Node.JS
+                  </div>
+                  <div class="bg-aero text-gray-200 text-[1.04rem] font-semibold mb-4 mr-4 py-3 px-5 rounded">
+                    React
+                  </div>
+                  <div class="bg-aero text-gray-200 text-[1.04rem] font-semibold mb-4 mr-4 py-3 px-5 rounded">
+                    GIT
+                  </div>
+                  <div class="bg-aero text-gray-200 text-[1.04rem] font-semibold mb-4 mr-4 py-3 px-5 rounded">
+                    GitHub
+                  </div>
+                  <div class="bg-aero text-gray-200 text-[1.04rem] font-semibold mb-4 mr-4 py-3 px-5 rounded">
+                    Responsive
+                  </div>
+                  <div class="bg-aero text-gray-200 text-[1.04rem] font-semibold mb-4 mr-4 py-3 px-5 rounded">
+                    SEO
+                  </div>
+                  <div class="bg-aero text-gray-200 text-[1.04rem] font-semibold mb-4 mr-4 py-3 px-5 rounded">
+                    Linux
+                  </div>
+                  <div class="bg-aero text-gray-200 text-[1.04rem] font-semibold mb-4 mr-4 py-3 px-5 rounded">
+                    REST APIs
+                  </div>
+
+                  <div class="bg-aero text-gray-200 text-[1.04rem] font-semibold mb-4 mr-4 py-3 px-5 rounded">
+                    SQL
+                  </div>
+                  <div class="bg-aero text-gray-200 text-[1.04rem] font-semibold mb-4 mr-4 py-3 px-5 rounded">
+                    CMS
+                  </div>
+                  <div class="bg-aero text-gray-200 text-[1.04rem] font-semibold mb-4 mr-4 py-3 px-5 rounded">
+                    Docker
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section
+          id="contact"
+          className="bg-cerulean flex items-center flex-col py-12 h-[400px]"
+        >
+          <div className="flex flex-col items-center w-full gap-4">
+            <h2 className="uppercase font-semibold text-4xl">Contact</h2>
+            <div className="h-[4px] w-[100px] bg-aero"></div>
+            <div className="w-1/2 text-2xl text-center font-medium text-gray-200">
+              Get in touch with me on <br />
+              <Link
+                href="https://linkedin.com/in/julianllechner"
+                className="font-bold"
+              >
+                <i className="fa-brands fa-linkedin"></i> LinkedIn
+              </Link>
+              <br />
+              <Link
+                href="mailto:jll38@njit.edu"
+                className="font-bold"
+              >
+                <i className="fa-solid fa-envelope"></i> Email
+              </Link>
+            </div>
+          </div>
+        </section>{" "}
+      </main>
     </>
   );
 }

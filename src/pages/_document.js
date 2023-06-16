@@ -13,6 +13,11 @@ export default function Document() {
         <meta property="og:title" content="Julian Lechner - Web Developer" />
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:image" content="https://jlechner.com/images/myself.png" />
+        <script
+          defer
+          src="https://kit.fontawesome.com/a7908c27f8.js"
+          crossorigin="anonymous"
+        ></script>
         {/* Global Site Tag (gtag.js) - Google Analytics */}
         <script
           async
@@ -31,7 +36,7 @@ export default function Document() {
             `,
           }} />
       </Head>
-      <body className="bg-white dark:bg-black">
+      <body className="bg-white text-white">
         <Main/>
         <NextScript />
       </body>
