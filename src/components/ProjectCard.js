@@ -9,7 +9,7 @@ export function ProjectCard({title, img, link, ghLink}) {
                     {" "}
                     <Link href={link} class="cursor-pointer" target={"_blank"}>
                       {" "}
-                      <img src={img} class="align-middle rounded overflow-clip object-cover h-[250px] w-[425px]" />{" "}
+                      <img src={img} class="align-middle rounded overflow-clip object-cover h-[250px] w-[425px]" alt={title + " Project Thumbnail"}/>{" "}
                     </Link>
                   </div>
                   <div class="bg-prussian p-6 rounded">
