@@ -258,7 +258,7 @@ export default function Home() {
                 fullest.
               </div>
             </div>
-            <div className="w-[350px] sm:w-[500px] sm:p-6">
+            <div className="w-[350px] sm:w-[500px] sm:p-6 pt-10">
               <div className="text-2xl font-semibold">
                 <i class="fa-solid fa-graduation-cap"></i> Education
               </div>

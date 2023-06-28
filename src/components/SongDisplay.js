@@ -106,7 +106,7 @@ const SpotifyViewer = () => {
   }, [current, timeAgo]);
 
   return (
-<div className="fixed right-10 bottom-10 bg-gradient-to-r from-gray-100 to-white border-2 p-1 md:flex z-40 gap-3  hidden shadow-lg rounded-xl">
+<div className="fixed right-6 bottom-10 bg-gradient-to-r from-gray-100 to-white border-2 p-1 md:flex z-40 gap-3  hidden shadow-lg rounded-xl">
   <div className="flex-shrink-0">
     <Image src={songImg} alt={`${songTitle} By ${songArtist} Cover Art`} width={77} height={77} className="rounded-md" />
   </div>
