@@ -13,7 +13,16 @@ module.exports = {
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
+      colors: {
+        'aero': '#05b2dc',
+        'cerulean': '#087CA7',
+        'prussian': '#033860',
+        'federal': '#031A6B',
+        'polynesian': '#004385'
+      }
     },
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/aspect-ratio'),
+  ],
 }
