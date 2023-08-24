@@ -298,6 +298,9 @@ export default function Home() {
                     React
                   </div>
                   <div class="bg-aero text-gray-200 text-[1.04rem] font-semibold mb-4 mr-4 py-3 px-5 rounded">
+                    Redux
+                  </div>
+                  <div class="bg-aero text-gray-200 text-[1.04rem] font-semibold mb-4 mr-4 py-3 px-5 rounded">
                     GIT
                   </div>
                   <div class="bg-aero text-gray-200 text-[1.04rem] font-semibold mb-4 mr-4 py-3 px-5 rounded">
@@ -315,7 +318,6 @@ export default function Home() {
                   <div class="bg-aero text-gray-200 text-[1.04rem] font-semibold mb-4 mr-4 py-3 px-5 rounded">
                     REST APIs
                   </div>
-
                   <div class="bg-aero text-gray-200 text-[1.04rem] font-semibold mb-4 mr-4 py-3 px-5 rounded">
                     SQL
                   </div>
