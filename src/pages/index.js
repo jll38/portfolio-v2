@@ -252,10 +252,10 @@ export default function Home() {
                 <br />
                 <br />
                 For as long as I can remember, I&apos;ve loved solving complex
-                problems and creating things that work. When I&apos;m not developing project
-                or working towards my degree, you&apos;ll find me in the gym, going out with
-                friends, on motorcycle rides, and trying to live life to the
-                fullest.
+                problems and creating things that work. When I&apos;m not
+                developing project or working towards my degree, you&apos;ll
+                find me in the gym, going out with friends, on motorcycle rides,
+                and trying to live life to the fullest.
               </div>
             </div>
             <div className="w-[350px] sm:w-[500px] sm:p-6 pt-10">
@@ -280,51 +280,77 @@ export default function Home() {
                 </div>
               </div>
               <div className="text-2xl font-semibold mt-6">
+                <i class="fa-solid fa-briefcase"></i> Experience
+              </div>
+              <div className="flex justify-between">
+                <div>
+                  <div className="text-[.8em] sm:text-lg">Project Manager</div>
+                  <div className="text-gray-200 text-[.7em] sm:text-xs">
+                    Eco-Enterprise
+                  </div>
+                </div>
+              </div>
+              <div className="flex justify-between">
+                <div>
+                  <div className="text-[.8em] sm:text-lg">
+                    React Developer Intern
+                  </div>
+                  <div className="text-gray-200 text-[.7em] sm:text-xs">
+                    SkyIT Services | Subsidiary of GBCS Group
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="sm:p-6 pt-10">
+              <div className="text-2xl font-semibold mt-6">
                 <i class="fa-solid fa-code"></i> Skills
                 <div class="text-black flex flex-wrap text-[0.65rem] mt-2">
-                  <div class="bg-aero text-gray-200 text-[1.04rem] font-semibold mb-4 mr-4 py-3 px-5 rounded">
+                  <div class="bg-aero text-gray-100  text-[1.04rem] font-semibold mb-4 mr-4 py-3 px-5 rounded">
                     HTML
                   </div>
-                  <div class="bg-aero text-gray-200 text-[1.04rem] font-semibold mb-4 mr-4 py-3 px-5 rounded">
+                  <div class="bg-aero text-gray-100 text-[1.04rem] font-semibold mb-4 mr-4 py-3 px-5 rounded">
                     CSS
                   </div>
-                  <div class="bg-aero text-gray-200 text-[1.04rem] font-semibold mb-4 mr-4 py-3 px-5 rounded">
+                  <div class="bg-aero text-gray-100 text-[1.04rem] font-semibold mb-4 mr-4 py-3 px-5 rounded">
                     JavaScript
                   </div>
-                  <div class="bg-aero text-gray-200 text-[1.04rem] font-semibold mb-4 mr-4 py-3 px-5 rounded">
+                  <div class="bg-aero text-gray-100 text-[1.04rem] font-semibold mb-4 mr-4 py-3 px-5 rounded">
                     Node.JS
                   </div>
-                  <div class="bg-aero text-gray-200 text-[1.04rem] font-semibold mb-4 mr-4 py-3 px-5 rounded">
+                  <div class="bg-aero text-gray-100 text-[1.04rem] font-semibold mb-4 mr-4 py-3 px-5 rounded">
                     React
                   </div>
-                  <div class="bg-aero text-gray-200 text-[1.04rem] font-semibold mb-4 mr-4 py-3 px-5 rounded">
+                  <div class="bg-aero text-gray-100 text-[1.04rem] font-semibold mb-4 mr-4 py-3 px-5 rounded">
+                    MongoDB
+                  </div>
+                  <div class="bg-aero text-gray-100 text-[1.04rem] font-semibold mb-4 mr-4 py-3 px-5 rounded">
                     Redux
                   </div>
-                  <div class="bg-aero text-gray-200 text-[1.04rem] font-semibold mb-4 mr-4 py-3 px-5 rounded">
+                  <div class="bg-aero text-gray-100 text-[1.04rem] font-semibold mb-4 mr-4 py-3 px-5 rounded">
                     GIT
                   </div>
-                  <div class="bg-aero text-gray-200 text-[1.04rem] font-semibold mb-4 mr-4 py-3 px-5 rounded">
+                  <div class="bg-aero text-gray-100 text-[1.04rem] font-semibold mb-4 mr-4 py-3 px-5 rounded">
                     GitHub
                   </div>
-                  <div class="bg-aero text-gray-200 text-[1.04rem] font-semibold mb-4 mr-4 py-3 px-5 rounded">
+                  <div class="bg-aero text-gray-100 text-[1.04rem] font-semibold mb-4 mr-4 py-3 px-5 rounded">
                     Responsive
                   </div>
-                  <div class="bg-aero text-gray-200 text-[1.04rem] font-semibold mb-4 mr-4 py-3 px-5 rounded">
+                  <div class="bg-aero text-gray-100 text-[1.04rem] font-semibold mb-4 mr-4 py-3 px-5 rounded">
                     SEO
                   </div>
-                  <div class="bg-aero text-gray-200 text-[1.04rem] font-semibold mb-4 mr-4 py-3 px-5 rounded">
+                  <div class="bg-aero text-gray-100 text-[1.04rem] font-semibold mb-4 mr-4 py-3 px-5 rounded">
                     Linux
                   </div>
-                  <div class="bg-aero text-gray-200 text-[1.04rem] font-semibold mb-4 mr-4 py-3 px-5 rounded">
+                  <div class="bg-aero text-gray-100 text-[1.04rem] font-semibold mb-4 mr-4 py-3 px-5 rounded">
                     REST APIs
                   </div>
-                  <div class="bg-aero text-gray-200 text-[1.04rem] font-semibold mb-4 mr-4 py-3 px-5 rounded">
+                  <div class="bg-aero text-gray-100 text-[1.04rem] font-semibold mb-4 mr-4 py-3 px-5 rounded">
                     SQL
                   </div>
-                  <div class="bg-aero text-gray-200 text-[1.04rem] font-semibold mb-4 mr-4 py-3 px-5 rounded">
+                  <div class="bg-aero text-gray-100 text-[1.04rem] font-semibold mb-4 mr-4 py-3 px-5 rounded">
                     CMS
                   </div>
-                  <div class="bg-aero text-gray-200 text-[1.04rem] font-semibold mb-4 mr-4 py-3 px-5 rounded">
+                  <div class="bg-aero text-gray-100 text-[1.04rem] font-semibold mb-4 mr-4 py-3 px-5 rounded">
                     Docker
                   </div>
                 </div>
@@ -348,10 +374,7 @@ export default function Home() {
                 <i className="fa-brands fa-linkedin"></i> LinkedIn
               </Link>
               <br />
-              <Link
-                href="mailto:jll38@njit.edu"
-                className="font-bold"
-              >
+              <Link href="mailto:jll38@njit.edu" className="font-bold">
                 <i className="fa-solid fa-envelope"></i> Email
               </Link>
             </div>
