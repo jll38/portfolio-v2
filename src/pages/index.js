@@ -37,39 +37,35 @@ export default function Home() {
     featRef.current?.scrollIntoView({ behavior: "smooth" });
   };
 
-  const frontEndSkills = [
+  const skills = [
     "HTML",
     "CSS",
     "JavaScript",
+    "TypeScript",
+    "NodeJS",
     "React",
-    "Next.JS",
-    "TailwindCSS",
-    "Bootstrap",
-  ];
-  const backEndSkills = [
-    "Node.JS",
-    "SQL",
-    "Python",
-    "Restful APIs",
-    "CMS",
-    "",
-    "",
-  ];
-  const otherSkills = [
+    "NextJS",
+    "Express",
+    "MongoDB",
+    "Redux",
     "Git",
-    "GitHub",
-    "Heroku",
-    "Webpack",
+    "Github",
+    "SQL",
     "Docker",
-    "VSCode",
-    "",
+    "CMS",
+    "RESTful APIs",
+    "SEO",
   ];
-
-  const frontEndLogo = "fa-brands fa-html5";
-  const backEndLogo = "fa-solid fa-code";
-  const otherLogo = "fa-solid fa-screwdriver-wrench";
 
   const projects = [
+    {
+      name: "NJITBytes",
+      desc: "NJITBytes is an application that serves live menus for GDS at NJIT. It also provides AI-powered personalized meal recommendations based on user information like height, weight, age, and dietary restrictions and goals.",
+      link: "https://njitbytes.co",
+      img: "/images/bytes.png",
+      ghLink: "https://github.com/jll38/njitbytes",
+      year: 2023,
+    },
     {
       name: "Atlas Gym (Business Site)",
       desc: "This project aims to develop a modern and user-friendly front-end website for Atlas Gym. It includes features such as membership information, class schedules, trainer profiles, testimonials, contact details, and social media integration.",
@@ -219,6 +215,7 @@ export default function Home() {
                   <ProjectCard
                     key={"Project-" + i}
                     title={project.name}
+                    desc={project.desc}
                     img={project.img}
                     link={project.link}
                     ghLink={project.ghLink}
@@ -252,10 +249,10 @@ export default function Home() {
                 <br />
                 <br />
                 For as long as I can remember, I&apos;ve loved solving complex
-                problems and creating things that work. When I&apos;m not developing project
-                or working towards my degree, you&apos;ll find me in the gym, going out with
-                friends, on motorcycle rides, and trying to live life to the
-                fullest.
+                problems and creating things that work. When I&apos;m not
+                developing project or working towards my degree, you&apos;ll
+                find me in the gym, going out with friends, on motorcycle rides,
+                and trying to live life to the fullest.
               </div>
             </div>
             <div className="w-[350px] sm:w-[500px] sm:p-6 pt-10">
@@ -280,54 +277,39 @@ export default function Home() {
                 </div>
               </div>
               <div className="text-2xl font-semibold mt-6">
-                <i class="fa-solid fa-code"></i> Skills
-                <div class="text-black flex flex-wrap text-[0.65rem] mt-2">
-                  <div class="bg-aero text-gray-200 text-[1.04rem] font-semibold mb-4 mr-4 py-3 px-5 rounded">
-                    HTML
-                  </div>
-                  <div class="bg-aero text-gray-200 text-[1.04rem] font-semibold mb-4 mr-4 py-3 px-5 rounded">
-                    CSS
-                  </div>
-                  <div class="bg-aero text-gray-200 text-[1.04rem] font-semibold mb-4 mr-4 py-3 px-5 rounded">
-                    JavaScript
-                  </div>
-                  <div class="bg-aero text-gray-200 text-[1.04rem] font-semibold mb-4 mr-4 py-3 px-5 rounded">
-                    Node.JS
-                  </div>
-                  <div class="bg-aero text-gray-200 text-[1.04rem] font-semibold mb-4 mr-4 py-3 px-5 rounded">
-                    React
-                  </div>
-                  <div class="bg-aero text-gray-200 text-[1.04rem] font-semibold mb-4 mr-4 py-3 px-5 rounded">
-                    Redux
-                  </div>
-                  <div class="bg-aero text-gray-200 text-[1.04rem] font-semibold mb-4 mr-4 py-3 px-5 rounded">
-                    GIT
-                  </div>
-                  <div class="bg-aero text-gray-200 text-[1.04rem] font-semibold mb-4 mr-4 py-3 px-5 rounded">
-                    GitHub
-                  </div>
-                  <div class="bg-aero text-gray-200 text-[1.04rem] font-semibold mb-4 mr-4 py-3 px-5 rounded">
-                    Responsive
-                  </div>
-                  <div class="bg-aero text-gray-200 text-[1.04rem] font-semibold mb-4 mr-4 py-3 px-5 rounded">
-                    SEO
-                  </div>
-                  <div class="bg-aero text-gray-200 text-[1.04rem] font-semibold mb-4 mr-4 py-3 px-5 rounded">
-                    Linux
-                  </div>
-                  <div class="bg-aero text-gray-200 text-[1.04rem] font-semibold mb-4 mr-4 py-3 px-5 rounded">
-                    REST APIs
-                  </div>
-                  <div class="bg-aero text-gray-200 text-[1.04rem] font-semibold mb-4 mr-4 py-3 px-5 rounded">
-                    SQL
-                  </div>
-                  <div class="bg-aero text-gray-200 text-[1.04rem] font-semibold mb-4 mr-4 py-3 px-5 rounded">
-                    CMS
-                  </div>
-                  <div class="bg-aero text-gray-200 text-[1.04rem] font-semibold mb-4 mr-4 py-3 px-5 rounded">
-                    Docker
+                <i class="fa-solid fa-briefcase"></i> Experience
+              </div>
+              <div className="flex justify-between">
+                <div>
+                  <div className="text-[.8em] sm:text-lg">Project Manager</div>
+                  <div className="text-gray-200 text-[.7em] sm:text-xs">
+                    Eco-Enterprise
                   </div>
                 </div>
+              </div>
+              <div className="flex justify-between">
+                <div>
+                  <div className="text-[.8em] sm:text-lg">
+                    React Developer Intern
+                  </div>
+                  <div className="text-gray-200 text-[.7em] sm:text-xs">
+                    SkyIT Services | Subsidiary of GBCS Group
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="sm:p-6 pt-10">
+              <div className="text-2xl font-semibold mt-6">
+                <i class="fa-solid fa-code"></i> Skills
+                <ul class="text-black flex flex-wrap text-[0.65rem] mt-2">
+                  {skills.map((skill, i) => {
+                    return (
+                      <li key={`skill-${i}`} class="bg-aero text-gray-100  text-[1.04rem] font-semibold mb-4 mr-4 py-3 px-5 rounded">
+                        {skill}
+                      </li>
+                    );
+                  })}
+                </ul>
               </div>
             </div>
           </div>
@@ -348,10 +330,7 @@ export default function Home() {
                 <i className="fa-brands fa-linkedin"></i> LinkedIn
               </Link>
               <br />
-              <Link
-                href="mailto:jll38@njit.edu"
-                className="font-bold"
-              >
+              <Link href="mailto:jll38@njit.edu" className="font-bold">
                 <i className="fa-solid fa-envelope"></i> Email
               </Link>
             </div>
