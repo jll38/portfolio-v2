@@ -59,6 +59,14 @@ export default function Home() {
 
   const projects = [
     {
+      name: "TinyClicks",
+      desc:"TinyClicks is a URL shortening service with an analytics dashboard. Built using Next.JS 13, backed by Prisma and MongoDB for data management",
+      link: "http://tinyclicks.co",
+      img: "https://private-user-images.githubusercontent.com/97925400/291477322-6a6ebad8-ce76-42bc-addd-8f27c7566e79.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MDQzMzUwOTgsIm5iZiI6MTcwNDMzNDc5OCwicGF0aCI6Ii85NzkyNTQwMC8yOTE0NzczMjItNmE2ZWJhZDgtY2U3Ni00MmJjLWFkZGQtOGYyN2M3NTY2ZTc5LnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDAxMDQlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQwMTA0VDAyMTk1OFomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTU5YjQ4Njg0MzBiZjUxZGQyNzY0YjNlMDY3YWRiZmY4M2YwNmIzNmQ5YzBmZGMwYTNkZmRlY2QzNDI5NDY3MTQmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JmFjdG9yX2lkPTAma2V5X2lkPTAmcmVwb19pZD0wIn0.ik90j-XBviWoRTkOQ7w07p5aq3f91l1XpnzvKBQhFC4",
+      ghLink: "https://github.com/jll38/url-shortener",
+      year: 2023
+    },
+    {
       name: "NJITBytes",
       desc: "NJITBytes is an application that serves live menus for GDS at NJIT. It also provides AI-powered personalized meal recommendations based on user information like height, weight, age, and dietary restrictions and goals.",
       link: "https://njitbytes.co",
