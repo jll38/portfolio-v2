@@ -122,7 +122,7 @@ export default function Home() {
                   className="w-[100px] h-[100px] lg:w-[200px] lg:h-[200px] relative bg-white rounded-full flex items-center justify-center px-4"
                 >
                   <div className="text-aero text-[.75em] lg:text-3xl text-center font-bold">
-                    LOOKING FOR WORK
+                    OPEN FOR HIRE
                   </div>
                 </div>
               </div>
