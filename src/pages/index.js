@@ -60,19 +60,19 @@ export default function Home() {
   const projects = [
     {
       name: "TinyClicks",
-      desc:"TinyClicks is a URL shortening service with an analytics dashboard. Built using Next.JS 13, backed by Prisma and MongoDB for data management",
+      desc: "TinyClicks is a URL shortening service with an analytics dashboard. Built using Next.JS 13, backed by Prisma and MongoDB for data management",
       link: "http://tinyclicks.co",
       img: "/images/tinyclicks.png",
       ghLink: "https://github.com/jll38/url-shortener",
-      year: 2023
+      year: 2023,
     },
     {
-      name: "NJITBytes",
-      desc: "NJITBytes is an application that serves live menus for GDS at NJIT. It also provides AI-powered personalized meal recommendations based on user information like height, weight, age, and dietary restrictions and goals.",
-      link: "https://njitbytes.co",
-      img: "/images/bytes.png",
-      ghLink: "https://github.com/jll38/njitbytes",
-      year: 2023,
+      name: "TypeScript Blackjack",
+      desc: "The Blackjack project is a console-based simulation of the Blackjack card game, also known as 21. Developed in Node.js, it showcases Object-Oriented Programming (OOP) principles and adheres to the SOLID design principles. ",
+      link: "https://github.com/jll38/blackjack-typescript",
+      img: "https://images.prismic.io/desplaines-rushstreetgaming/1c8e0aa3-6b2d-4f01-a49e-15b556dc0882_03253_March-Blackjack-Blowout-Email_Image_1200x650_v1_210223.jpg?auto=compress,format",
+      ghLink: "https://github.com/jll38/blackjack-typescript",
+      year: 2024,
     },
     {
       name: "Atlas Gym (Business Site)",
@@ -312,7 +312,10 @@ export default function Home() {
                 <ul class="text-black flex flex-wrap text-[0.65rem] mt-2">
                   {skills.map((skill, i) => {
                     return (
-                      <li key={`skill-${i}`} class="bg-aero text-gray-100  text-[1.04rem] font-semibold mb-4 mr-4 py-3 px-5 rounded">
+                      <li
+                        key={`skill-${i}`}
+                        class="bg-aero text-gray-100  text-[1.04rem] font-semibold mb-4 mr-4 py-3 px-5 rounded"
+                      >
                         {skill}
                       </li>
                     );
